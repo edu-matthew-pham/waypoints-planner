@@ -1,0 +1,114 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standard": {
+    "code": "AC9S7U05",
+    "title": "Particle Theory and Properties",
+    "description": "Use particle theory to describe the arrangement of particles in a substance, including the motion of and attraction between particles, and relate this to the properties of the substance",
+    "prior_knowledge": "Students know that matter exists as solids, liquids and gases and can describe observable properties. They have not used particle theory to explain properties or modelled particle behaviour at a submicroscopic level.",
+    "y_goal": "Students use particle theory to explain and predict the physical properties of substances in terms of particle arrangement, motion and attraction.",
+    "nodes": [
+      {
+        "id": 1,
+        "label": "Introducing the particle model",
+        "xmin": "State the key ideas of particle theory (particles, spacing, motion, attraction); correctly match particle diagrams to solid, liquid and gas",
+        "width_core": "Explain three observable properties of a substance using particle theory language; draw and annotate particle diagrams",
+        "width_enrich_options": [
+          "Use and construct models, diagrams or virtual simulations to represent particle arrangement in different states",
+          "Evaluate the particle model as a model \u2014 what does it explain well, what does it not explain, and what evidence supports it?",
+          "Compare the particle model with how materials properties are described in Design and Technologies contexts"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I04"
+        ],
+        "endeavour_links": [
+          "AC9S7H01"
+        ],
+        "y_description": "Students can match particle diagrams to states of matter and state the key ideas of particle theory"
+      },
+      {
+        "id": 2,
+        "label": "Particle arrangement, motion and attraction in each state",
+        "xmin": "Describe particle arrangement, motion and attraction for each state; explain why solids hold shape and gases fill containers",
+        "width_core": "Compare particle diagrams for 6 substances \u2014 rank by particle spacing and predict relative density; check against data",
+        "width_enrich_options": [
+          "Relate motion and energy of particles to distances between particles in different states of the same substance",
+          "Compare attractive forces in solid, liquid and gaseous states and relate to relative position and movement of particles",
+          "Investigate an anomalous case (e.g. ice floating on water) \u2014 explain using particle theory and evaluate whether the basic model needs refinement"
+        ],
+        "hinge": true,
+        "hinge_reason": "Particle arrangement is the foundation of all property explanations. Students who treat particle diagrams as decorative rather than explanatory cannot use the model to reason. Primary misconception gateway \u2014 errors propagate into every subsequent node and are directly assessed.",
+        "inquiry_links": [
+          "AC9S7I04",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [],
+        "y_description": "Students can describe particle arrangement, motion and attraction for each state and explain observable properties using this model"
+      },
+      {
+        "id": 3,
+        "label": "Explaining physical properties using particle theory",
+        "xmin": "Use particle theory to explain at least two physical properties (e.g. compressibility, viscosity, density) of a given substance",
+        "width_core": "Compare the physical properties of three substances using particle theory; explain why properties differ in terms of arrangement, motion and attraction",
+        "width_enrich_options": [
+          "Investigate properties of materials such as density, melting point and compressibility and explain in terms of particle arrangement",
+          "Explain the process of diffusion in a liquid and a gas in terms of particle motion",
+          "Predict the properties of an unfamiliar substance given only its particle diagram; justify predictions and test against published data"
+        ],
+        "hinge": true,
+        "hinge_reason": "This is the key application node \u2014 using the model to explain rather than just describe. Assessment tasks require explanatory use of particle theory. Students who can only recall diagrams without explanation cannot access higher marks.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I05",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [],
+        "y_description": "Students can use particle theory to explain physical properties of substances including compressibility, viscosity and density"
+      },
+      {
+        "id": 4,
+        "label": "Changes of state and energy",
+        "xmin": "Explain melting, freezing, evaporation and condensation using particle theory; correctly identify energy input/output for each change",
+        "width_core": "Analyse a heating/cooling curve \u2014 identify each state change, explain plateau regions using particle theory, connect to energy changes",
+        "width_enrich_options": [
+          "Examine how changing motion and energy of particles is affected by heat energy absorbed or released",
+          "Model changes in particle arrangement as substances change state using diagrams or virtual simulations",
+          "Investigate sublimation or a non-standard state change \u2014 explain using particle theory and evaluate whether the basic model is sufficient"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I03",
+          "AC9S7I04",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [],
+        "y_description": "Students can explain changes of state using particle theory and correctly identify energy input or output for each change"
+      },
+      {
+        "id": 5,
+        "label": "Particle theory as a model: scope and limits",
+        "xmin": "Identify one phenomenon particle theory explains well and one it does not explain; give a reason for each",
+        "width_core": "Compare particle theory with an alternative model \u2014 explain what each is designed to explain and why scientists use multiple models",
+        "width_enrich_options": [
+          "Research a historical development of particle theory \u2014 how did evidence change the model over time?",
+          "Analyse how characteristics and properties of materials are used in Design and Technologies to create solutions \u2014 connect to particle-level explanations",
+          "Evaluate published claims about a material's properties using particle theory as a critical lens"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I06",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H01",
+          "AC9S7H02"
+        ],
+        "y_description": "Students can identify the scope and limitations of the particle model and explain what evidence supports it"
+      }
+    ]
+  }
+}

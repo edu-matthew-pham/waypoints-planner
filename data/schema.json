@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "X–Y Unit Planner — Standard Node File",
+  "description": "Schema for a single ACARA standard node map file. One file per standard, stored in data/.",
+  "type": "object",
+  "required": ["year_level", "subject", "standard"],
+  "properties": {
+    "year_level": {
+      "type": "string",
+      "description": "Year level this standard belongs to. e.g. '7'"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject area. e.g. 'Science'"
+    },
+    "standard": {
+      "type": "object",
+      "required": ["code", "title", "description", "prior_knowledge", "y_goal", "nodes"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "ACARA content descriptor code. e.g. 'AC9S7U01'"
+        },
+        "title": {
+          "type": "string",
+          "description": "Short title for the standard. e.g. 'Classification and Biodiversity'"
+        },
+        "description": {
+          "type": "string",
+          "description": "Full ACARA content descriptor text."
+        },
+        "prior_knowledge": {
+          "type": "string",
+          "description": "What students are assumed to know before this unit begins (ACARA assumed prior for this year level)."
+        },
+        "y_goal": {
+          "type": "string",
+          "description": "Fixed conceptual endpoint for all students — the shared assessment target. Must not be exceeded."
+        },
+        "nodes": {
+          "type": "array",
+          "description": "Ordered sequence of conceptual waypoints from assumed prior to Y-goal. All nodes are mandatory.",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "y_description", "xmin", "width_core", "width_enrich_options", "hinge", "hinge_reason", "inquiry_links", "endeavour_links"],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "description": "Sequential node number within this standard."
+              },
+              "label": {
+                "type": "string",
+                "description": "Short display name for the node. e.g. 'Purpose of classification'"
+              },
+              "y_description": {
+                "type": "string",
+                "description": "Conceptual position reached at this node — framed as 'Students can...'. This is the Y-axis position."
+              },
+              "xmin": {
+                "type": "string",
+                "description": "Minimum construction required before advancing to the next node. Non-negotiable floor — certifies readiness."
+              },
+              "width_core": {
+                "type": "string",
+                "description": "X+ task — same concept as Xmin, broader integration and coordination. Standard construction for typical friction class."
+              },
+              "width_enrich_options": {
+                "type": "array",
+                "description": "X++ options — open-access transfer and application beyond taught examples. Drawn from ACARA elaborations. Teachers choose one or more.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hinge": {
+                "type": "boolean",
+                "description": "True if this is a hinge concept — a node where misconceptions cluster, later nodes depend on it, and width investment here pays off disproportionately."
+              },
+              "hinge_reason": {
+                "type": ["string", "null"],
+                "description": "Required if hinge is true. Explains why this node is a hinge — dependency, misconception gateway, assessment sensitivity. Null if hinge is false."
+              },
+              "inquiry_links": {
+                "type": "array",
+                "description": "ACARA Science Inquiry skill codes relevant to this node. e.g. ['AC9S7I01', 'AC9S7I04']",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "endeavour_links": {
+                "type": "array",
+                "description": "ACARA Science as a Human Endeavour codes relevant to this node. e.g. ['AC9S7H02']",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "_notes": {
+    "width_terminology": {
+      "Xmin": "Minimum construction — non-negotiable floor before advancing",
+      "X+": "Extended width — same concept, broader integration (width_core field)",
+      "X++": "Synthetic width — open-access transfer beyond taught examples (width_enrich_options field)"
+    },
+    "friction_effect": "Friction level determines which width level is recommended per node — it does not change the node sequence or Y-goal.",
+    "file_naming": "Files should follow the pattern: {year_level}_{subject}_{code}.json e.g. y7_science_AC9S7U01.json",
+    "adding_standards": "To add a new standard, create a new file in data/ following this schema. utils.py loads all files from data/ automatically."
+  }
+}

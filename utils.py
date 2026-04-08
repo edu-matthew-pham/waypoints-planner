@@ -1,11 +1,20 @@
 import json
 import streamlit as st
 
-# ── Load node data ─────────────────────────────────────────────────────────────
+# ── Load node data from data/ folder ──────────────────────────────────────────
+import os
+import glob
+
 @st.cache_data
 def load_nodes():
-    with open("y7_science_nodes.json") as f:
-        return json.load(f)
+    standards = []
+    for fpath in sorted(glob.glob(os.path.join("data", "*.json"))):
+        if os.path.basename(fpath) == "schema.json":
+            continue
+        with open(fpath) as f:
+            d = json.load(f)
+            standards.append(d["standard"])
+    return {"standards": standards}
 
 data = load_nodes()
 standards_map = {s["code"]: s for s in data["standards"]}

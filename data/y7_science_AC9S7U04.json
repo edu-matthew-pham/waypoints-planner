@@ -1,0 +1,122 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standard": {
+    "code": "AC9S7U04",
+    "title": "Forces and Motion",
+    "description": "Investigate and represent balanced and unbalanced forces, including gravitational force, acting on objects, and relate changes in an object's motion to its mass and the magnitude and direction of forces acting on it",
+    "prior_knowledge": "Students can identify pushes and pulls as forces and know that gravity pulls objects toward Earth. They have not represented forces as vectors, analysed balanced/unbalanced states, or applied F=ma reasoning.",
+    "y_goal": "Students represent and explain how balanced and unbalanced forces, including gravity, relate to changes in an object's motion in terms of mass, magnitude and direction.",
+    "nodes": [
+      {
+        "id": 1,
+        "label": "Forces as vectors: magnitude and direction",
+        "xmin": "Represent at least two forces on an object using arrows with correct relative size and direction; name the forces",
+        "width_core": "Draw force diagrams for 4 different scenarios (stationary, accelerating, decelerating, falling); justify arrow choices",
+        "width_enrich_options": [
+          "Measure the magnitude of forces using a force meter; represent magnitude and direction using force arrow diagrams",
+          "Analyse a real photograph of an object in motion \u2014 identify all forces acting and represent them in a diagram",
+          "Investigate forces acting on boomerangs and how First Peoples of Australia designed an aerofoil profile \u2014 represent forces involved"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I03",
+          "AC9S7I04"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can represent forces on an object as vectors showing correct magnitude and direction and name the forces"
+      },
+      {
+        "id": 2,
+        "label": "Balanced forces and equilibrium",
+        "xmin": "Define balanced forces; correctly identify whether forces are balanced in a given diagram; state that balanced forces mean no change in motion",
+        "width_core": "Analyse 6 scenarios \u2014 classify each as balanced or unbalanced; predict the motion state for each with reasoning",
+        "width_enrich_options": [
+          "Analyse the effect of balanced and unbalanced forces on an object's motion including starting, stopping and changing direction",
+          "Investigate a real engineering structure (e.g. bridge, building) \u2014 identify how balanced forces are maintained",
+          "Investigate how simple machines such as levers and pulleys change the magnitude of force needed \u2014 represent forces involved"
+        ],
+        "hinge": true,
+        "hinge_reason": "The misconception that balanced forces mean no forces (rather than equal and opposite) is extremely common and directly undermines Newton's First Law. This error propagates into every subsequent node.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I05",
+          "AC9S7I06"
+        ],
+        "endeavour_links": [
+          "AC9S7H03"
+        ],
+        "y_description": "Students can identify whether forces on an object are balanced or unbalanced and predict the resulting motion state"
+      },
+      {
+        "id": 3,
+        "label": "Unbalanced forces and changes in motion",
+        "xmin": "Explain that unbalanced forces cause a change in motion (speed or direction); give two examples with force diagrams",
+        "width_core": "Analyse motion scenarios \u2014 identify the unbalanced force, predict the change in motion, draw the force diagram",
+        "width_enrich_options": [
+          "Investigate the effects of applying different forces to familiar objects of the same and different mass",
+          "Design a fair test to investigate how the magnitude of an unbalanced force affects the rate of motion change",
+          "Investigate forces through application of traditional tools such as spearthrowers used by First Peoples of Australia \u2014 analyse the forces involved"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I02",
+          "AC9S7I03"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can explain that unbalanced forces cause a change in motion and represent this with force diagrams"
+      },
+      {
+        "id": 4,
+        "label": "Gravitational force and mass",
+        "xmin": "Distinguish mass from weight; explain gravitational force as dependent on mass; calculate weight given mass and gravitational field strength",
+        "width_core": "Compare gravitational force on the same object on Earth, the Moon, and Mars \u2014 explain differences using gravitational field strength",
+        "width_enrich_options": [
+          "Investigate how Earth's gravitational force pulls objects to the centre of Earth and how its magnitude relates to mass",
+          "Examine how gravity affects objects in space including moons, planets, stars and galaxies",
+          "Evaluate a common misconception (e.g. 'objects fall at different rates based on mass') using experimental evidence; construct a refutation"
+        ],
+        "hinge": true,
+        "hinge_reason": "Mass/weight confusion is the most persistent misconception in this standard and is directly assessed. Students who conflate the two make systematic errors in force calculations and cannot correctly explain gravitational scenarios.",
+        "inquiry_links": [
+          "AC9S7I03",
+          "AC9S7I06",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H01"
+        ],
+        "y_description": "Students can distinguish mass from weight, explain gravitational force as dependent on mass, and calculate weight from mass"
+      },
+      {
+        "id": 5,
+        "label": "Relating force, mass and motion change",
+        "xmin": "State the relationship between force, mass and acceleration qualitatively; predict whether a heavier or lighter object will accelerate more under the same force",
+        "width_core": "Analyse data from a force investigation \u2014 identify the pattern between force, mass and acceleration; represent graphically",
+        "width_enrich_options": [
+          "Evaluate a real-world application (e.g. vehicle safety, rocket launch) \u2014 explain how engineers manipulate force and mass",
+          "Investigate how simple machines change force magnitude for a task; analyse the trade-offs involved",
+          "Analyse the forces acting on a boomerang in flight \u2014 explain how design variables affect the motion outcome"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I04",
+          "AC9S7I05",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H03"
+        ],
+        "y_description": "Students can describe the qualitative relationship between force, mass and acceleration and interpret data from force investigations"
+      }
+    ]
+  }
+}

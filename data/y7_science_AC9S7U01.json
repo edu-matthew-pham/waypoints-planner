@@ -1,0 +1,116 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standard": {
+    "code": "AC9S7U01",
+    "title": "Classification and Biodiversity",
+    "description": "Investigate the role of classification in ordering and organising the diversity of life on Earth and use and develop classification tools including dichotomous keys",
+    "prior_knowledge": "Students can name and describe familiar living things and sort them into broad groups (animals, plants). They have not studied formal taxonomy or constructed classification tools.",
+    "y_goal": "Students explain why classification systems are used, apply and construct dichotomous keys, and evaluate how classification tools order and organise biodiversity.",
+    "nodes": [
+      {
+        "id": 1,
+        "label": "Purpose of classification",
+        "xmin": "State at least two reasons why scientists classify living things; give one example of classification in everyday life",
+        "width_core": "Compare two different classification systems; explain which is more useful for a given purpose and why",
+        "width_enrich_options": [
+          "Investigate how Aboriginal and Torres Strait Islander peoples classify living things on Country and compare with Linnaean taxonomy \u2014 what does each system prioritise?",
+          "Research how classification systems have changed over time through improvements in microscopy; explain what this reveals about scientific knowledge",
+          "Consider how classification supports identification and communication in a real scientific or practical context (e.g. biosecurity, medicine)"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can explain why classification is useful for organising and communicating about living things"
+      },
+      {
+        "id": 2,
+        "label": "Taxonomy: major groups and kingdoms",
+        "xmin": "Name the major kingdoms; correctly place 5 familiar organisms into their kingdom with justification using observable features",
+        "width_core": "Sort a set of 12 organisms into kingdoms; identify one organism that is difficult to classify and explain why",
+        "width_enrich_options": [
+          "Name and classify species using Linnaean hierarchy (kingdom \u2192 species); explain what each level represents",
+          "Research a boundary case (e.g. Euglena, virus) \u2014 does it fit the kingdom model? What does this reveal about classification systems?",
+          "Observe and identify similarities and differences of particular features within and between groups of organisms using provided specimens or images"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I04",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [
+          "AC9S7H01"
+        ],
+        "y_description": "Students can place organisms into major taxonomic groups using observable features and justify their classification"
+      },
+      {
+        "id": 3,
+        "label": "Using dichotomous keys",
+        "xmin": "Use a provided dichotomous key to correctly identify at least 5 organisms; explain how each decision point works",
+        "width_core": "Use two different keys for the same organism set; identify where they agree and disagree and explain why",
+        "width_enrich_options": [
+          "Use a provided dichotomous key to identify organisms surveyed on a field trip or from local environment",
+          "Evaluate a flawed dichotomous key \u2014 identify the error, explain its consequence, and propose a correction",
+          "Compare a scientific dichotomous key with a First Nations classification system for the same organisms \u2014 what features does each prioritise?"
+        ],
+        "hinge": true,
+        "hinge_reason": "Using a key requires students to apply binary logic to observable features \u2014 a prerequisite for constructing keys. Misconceptions about feature selection cluster here and propagate directly into Node 4.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I04"
+        ],
+        "endeavour_links": [],
+        "y_description": "Students can use a dichotomous key to identify organisms by applying binary decisions based on observable features"
+      },
+      {
+        "id": 4,
+        "label": "Constructing dichotomous keys",
+        "xmin": "Construct a simple dichotomous key for a set of 6 organisms using observable features; test it with a peer",
+        "width_core": "Construct and refine a key for 10 organisms; document one revision made after peer testing and explain the improvement",
+        "width_enrich_options": [
+          "Create and modify a dichotomous key to classify organisms into groups and subgroups; evaluate its effectiveness",
+          "Design a key for a novel organism set (e.g. everyday objects or invented creatures); reflect on what makes a feature scientifically useful",
+          "Construct a key based on First Nations classification criteria for local organisms and compare its structure with a Linnaean key"
+        ],
+        "hinge": true,
+        "hinge_reason": "Construction requires students to reverse-engineer the logic of classification \u2014 the deepest understanding of the standard. Assessment items directly test this. Errors here are not recoverable without significant reteaching.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I02",
+          "AC9S7I06"
+        ],
+        "endeavour_links": [
+          "AC9S7H01"
+        ],
+        "y_description": "Students can construct a dichotomous key that correctly classifies a set of organisms using observable features"
+      },
+      {
+        "id": 5,
+        "label": "Classification systems change over time",
+        "xmin": "Give one example of a reclassification event; explain what new evidence caused the change",
+        "width_core": "Trace the reclassification of one organism \u2014 what evidence existed before, what changed, and how did the scientific community respond?",
+        "width_enrich_options": [
+          "Examine how biological classification has changed through improvements in microscopy and DNA analysis",
+          "Evaluate: is reclassification a sign that science is unreliable, or a sign that it works? Construct an evidence-based argument",
+          "Investigate how First Nations classification knowledge has contributed to or challenged scientific classification in specific cases"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H01",
+          "AC9S7H03"
+        ],
+        "y_description": "Students can explain how classification systems change in response to new evidence and evaluate what this reveals about scientific knowledge"
+      }
+    ]
+  }
+}

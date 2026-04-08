@@ -1,0 +1,118 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standard": {
+    "code": "AC9S7U02",
+    "title": "Food Webs and Ecosystems",
+    "description": "Use models, including food webs, to represent matter and energy flow in ecosystems and predict the impact of changing abiotic and biotic factors on populations",
+    "prior_knowledge": "Students can identify producers, consumers and decomposers and construct simple food chains. They have not studied energy flow quantitatively or modelled multi-factor ecosystem changes.",
+    "y_goal": "Students use food web models to represent matter and energy flow, and predict and explain population impacts of changes to abiotic and biotic factors.",
+    "nodes": [
+      {
+        "id": 1,
+        "label": "From food chains to food webs",
+        "xmin": "Construct a food web from a given organism list; identify producers, primary and secondary consumers, and decomposers including microorganisms",
+        "width_core": "Compare a food chain and food web for the same ecosystem \u2014 explain what information is lost in the simpler model",
+        "width_enrich_options": [
+          "Analyse food webs to show feeding relationships including the role of microorganisms in decomposition",
+          "Critique a published food web diagram \u2014 what is it missing, what assumptions does it make?",
+          "Investigate First Nations Australians' food webs in a specific region and compare with a scientific representation of the same ecosystem"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I04"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can construct a food web and identify the roles of producers, consumers and decomposers including microorganisms"
+      },
+      {
+        "id": 2,
+        "label": "Matter and energy flow",
+        "xmin": "Explain the direction of energy flow in a food web; state that energy is lost at each trophic level; distinguish energy flow from matter cycling",
+        "width_core": "Use a given energy pyramid to explain why top predators are rare; connect to food web structure",
+        "width_enrich_options": [
+          "Model how energy flows into and out of an ecosystem via food web pathways; represent quantitatively using the 10% rule",
+          "Compare energy flow in two different ecosystems (e.g. rainforest vs desert); explain structural differences",
+          "Analyse a real dataset of biomass at each trophic level; explain the pattern using energy flow principles"
+        ],
+        "hinge": true,
+        "hinge_reason": "Energy flow direction and loss is the conceptual engine behind all population prediction tasks. Students who conflate matter cycling with energy flow make systematic errors in Nodes 3 and 4. Primary misconception gateway for this standard.",
+        "inquiry_links": [
+          "AC9S7I04",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [],
+        "y_description": "Students can explain the direction and loss of energy through trophic levels and distinguish energy flow from matter cycling"
+      },
+      {
+        "id": 3,
+        "label": "Abiotic factors and population effects",
+        "xmin": "Define abiotic factor; give three examples; explain how one abiotic change would affect one population in a given food web",
+        "width_core": "Trace the cascade effect of one abiotic change (e.g. drought, temperature rise) through at least 3 populations with reasoning at each step",
+        "width_enrich_options": [
+          "Examine how seasonal changes or habitat destruction impact abiotic factors and cause population changes",
+          "Compare cascade effects of two different abiotic changes on the same ecosystem \u2014 which is more destabilising and why?",
+          "Investigate First Nations Australians' fire management practices and their effect on abiotic factors and flora/fauna distribution"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [
+          "AC9S7H03"
+        ],
+        "y_description": "Students can predict and explain how a change to an abiotic factor cascades through populations in a food web"
+      },
+      {
+        "id": 4,
+        "label": "Biotic factors and population effects",
+        "xmin": "Define biotic factor; give three examples; predict the effect of removing one species from a given food web with reasoning",
+        "width_core": "Analyse a trophic cascade case study (e.g. wolf reintroduction in Yellowstone); explain the chain of biotic effects with evidence",
+        "width_enrich_options": [
+          "Predict effects on local ecosystems when pollinators or predators are removed or introduced",
+          "Investigate First Nations Australians' responses to invasive species and their effect on food webs communities depend on",
+          "Evaluate an invasive species scenario \u2014 construct food webs before and after, predict population effects, and propose a management response"
+        ],
+        "hinge": true,
+        "hinge_reason": "Predicting biotic cascade effects requires holding the whole food web in mind simultaneously \u2014 the deepest application of the model. Assessment tasks typically test this directly. Students who haven't secured energy flow (Node 2) make compounding errors here.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I05",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H03",
+          "AC9S7H04"
+        ],
+        "y_description": "Students can predict and explain how a change to a biotic factor cascades through populations in a food web"
+      },
+      {
+        "id": 5,
+        "label": "Models, limitations and predictions",
+        "xmin": "Identify one limitation of food web models; explain how this affects the reliability of predictions made from them",
+        "width_core": "Compare a simple and complex model of the same ecosystem \u2014 explain what each can and cannot predict",
+        "width_enrich_options": [
+          "Evaluate a real scientific food web model used in a conservation decision \u2014 what did it predict, what did it miss?",
+          "Consider how introduction of a species impacts abiotic and biotic factors beyond immediate food web effects",
+          "Research how First Nations ecological knowledge has improved or challenged scientific food web models in a specific case"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I06",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H01",
+          "AC9S7H03"
+        ],
+        "y_description": "Students can evaluate the limitations of food web models and explain how these affect the reliability of predictions"
+      }
+    ]
+  }
+}

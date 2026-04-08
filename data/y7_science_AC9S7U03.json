@@ -1,0 +1,120 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standard": {
+    "code": "AC9S7U03",
+    "title": "Earth-Sun-Moon System",
+    "description": "Model cyclic changes in the relative positions of the Earth, sun and moon and explain how these cycles cause eclipses and influence predictable phenomena on Earth, including seasons and tides",
+    "prior_knowledge": "Students can describe day/night as caused by Earth's rotation and identify moon phases from observation. They have not modelled 3D spatial relationships or explained tides and eclipses mechanistically.",
+    "y_goal": "Students model and explain how cyclic changes in Earth-sun-moon positions cause eclipses, seasons and tides.",
+    "nodes": [
+      {
+        "id": 1,
+        "label": "Earth's rotation, revolution and axial tilt",
+        "xmin": "Distinguish rotation from revolution; link rotation to day/night and revolution to the year; identify that Earth's axis is tilted",
+        "width_core": "Use a physical or digital model to demonstrate both cycles simultaneously; explain what an observer on Earth would experience across a year",
+        "width_enrich_options": [
+          "Use physical models or virtual simulations to explain how Earth's tilt and position relative to the sun causes differences in light intensity",
+          "Investigate First Nations Australians' calendars and how they are used to predict seasonal changes",
+          "Explain why the length of daylight changes across a year at different latitudes using a model"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I04"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can distinguish Earth's rotation from revolution and explain how axial tilt relates to observable changes across a year"
+      },
+      {
+        "id": 2,
+        "label": "Moon phases and the lunar cycle",
+        "xmin": "Correctly sequence all 8 moon phases; explain that phases result from the moon's position relative to Earth and sun, not Earth's shadow",
+        "width_core": "Model moon phases using a light source and spheres; predict the phase visible from Earth at a given moon position",
+        "width_enrich_options": [
+          "Analyse a month of real moon phase data \u2014 identify the pattern, calculate the period, identify anomalies",
+          "Research knowledges held by First Nations Australians regarding the phases of the moon and the lunar cycle",
+          "Investigate how lunar calendars from different cultures use moon phases differently and why"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I03",
+          "AC9S7I04",
+          "AC9S7I05"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can explain moon phases as a result of the moon's position relative to Earth and sun and sequence them correctly"
+      },
+      {
+        "id": 3,
+        "label": "Eclipses: solar and lunar",
+        "xmin": "Explain the conditions required for a solar and lunar eclipse; correctly distinguish umbra from penumbra; explain why eclipses don't occur every month",
+        "width_core": "Model both eclipse types using a light source; explain the role of the moon's orbital tilt in eclipse frequency",
+        "width_enrich_options": [
+          "Use physical models or virtual simulations to explain cyclic patterns of lunar and solar eclipses",
+          "Research First Nations Australians' oral traditions and cultural recordings of solar and lunar eclipses; compare with contemporary understandings",
+          "Analyse historical eclipse records \u2014 explain why ancient cultures found eclipses unpredictable and what understanding was missing"
+        ],
+        "hinge": true,
+        "hinge_reason": "Eclipse explanation requires 3D spatial reasoning about three bodies simultaneously \u2014 the hardest conceptual step in this standard. Students who rely on 2D diagrams alone consistently misexplain why eclipses are rare. Directly affects assessment performance.",
+        "inquiry_links": [
+          "AC9S7I01",
+          "AC9S7I04"
+        ],
+        "endeavour_links": [
+          "AC9S7H01",
+          "AC9S7H02"
+        ],
+        "y_description": "Students can explain the conditions required for solar and lunar eclipses and why eclipses do not occur every month"
+      },
+      {
+        "id": 4,
+        "label": "Seasons",
+        "xmin": "Explain that seasons are caused by Earth's axial tilt, not distance from the sun; correctly link tilt to solar angle and day length",
+        "width_core": "Use a model to demonstrate why the Southern and Northern hemispheres experience opposite seasons simultaneously",
+        "width_enrich_options": [
+          "Compare seasonal patterns at the equator, temperate zones, and poles \u2014 explain differences using the tilt model",
+          "Investigate First Nations Australians' seasonal calendars (e.g. six-season calendars) and compare with the four-season European model",
+          "Analyse real insolation data for two locations at different latitudes across a year; explain the patterns using the tilt model"
+        ],
+        "hinge": true,
+        "hinge_reason": "The distance misconception (seasons caused by proximity to sun) is extremely persistent and directly tested in assessments. Without resolving it here, students produce confidently wrong answers. High width investment has strong downstream payoff.",
+        "inquiry_links": [
+          "AC9S7I04",
+          "AC9S7I06"
+        ],
+        "endeavour_links": [
+          "AC9S7H02"
+        ],
+        "y_description": "Students can explain seasons as caused by axial tilt and correctly relate tilt to solar angle and day length at different latitudes"
+      },
+      {
+        "id": 5,
+        "label": "Tides",
+        "xmin": "Explain that tides are caused by the moon's gravitational pull; identify spring and neap tides and the moon positions that cause them",
+        "width_core": "Analyse a tide chart for a coastal location \u2014 identify spring and neap cycles and connect them to the lunar calendar",
+        "width_enrich_options": [
+          "Examine the gravitational attraction of the moon and sun on Earth's oceans; explain how relative positions result in tidal variations",
+          "Research how First Nations Australians used tidal patterns and connection between lunar cycle and ocean tides for resource management",
+          "Investigate how tidal patterns differ between locations and explain using the moon-sun-Earth model"
+        ],
+        "hinge": false,
+        "hinge_reason": null,
+        "inquiry_links": [
+          "AC9S7I05",
+          "AC9S7I07"
+        ],
+        "endeavour_links": [
+          "AC9S7H02",
+          "AC9S7H04"
+        ],
+        "y_description": "Students can explain tides as caused by the moon's gravitational pull and distinguish spring from neap tides by moon position"
+      }
+    ]
+  }
+}
