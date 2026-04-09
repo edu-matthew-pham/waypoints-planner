@@ -37,13 +37,13 @@ def show():
     # Initialise assessments list in session state
     if "assessments" not in st.session_state or not st.session_state.assessments:
         st.session_state.assessments = [
-            {"id": 1, "label": "Assessment 1", "type": "Test", "timing": "End of unit"}
+            {"id": 1, "label": "Assessment 1", "type": "Test", "reported": "Summative", "timing": "End of unit"}
         ]
 
     assessments = st.session_state.assessments
 
     for i, item in enumerate(assessments):
-        with st.expander(f"{item['label']} — {item['type']}", expanded=True):
+        with st.expander(f"Assessment {item['id']}", expanded=True):
             col1, col2, col3 = st.columns(3)
             with col1:
                 label = st.text_input(
@@ -59,6 +59,15 @@ def show():
                     key=f"type_{item['id']}",
                     captions=["Closed response", "Practical/extended task"]
                 )
+            with st.columns(1)[0]:
+                reported = st.radio(
+                    "Reported",
+                    ["Summative", "Formative"],
+                    index=["Summative", "Formative"].index(item.get("reported", "Summative")),
+                    horizontal=True,
+                    key=f"reported_{item['id']}",
+                    captions=["Contributes to grade", "Checkpoint — not reported"]
+                )
             with col3:
                 timing = st.radio(
                     "Timing",
@@ -69,7 +78,7 @@ def show():
                 )
 
             # Update item
-            assessments[i] = {"id": item["id"], "label": label, "type": atype, "timing": timing}
+            assessments[i] = {"id": item["id"], "label": label, "type": atype, "reported": reported, "timing": timing}
 
             if len(assessments) > 1:
                 if st.button(f"Remove", key=f"remove_{item['id']}"):
@@ -79,7 +88,7 @@ def show():
 
     if st.button("+ Add assessment item"):
         new_id = max(a["id"] for a in assessments) + 1
-        assessments.append({"id": new_id, "label": f"Assessment {new_id}", "type": "Test", "timing": "End of unit"})
+        assessments.append({"id": new_id, "label": f"Assessment {new_id}", "type": "Test", "reported": "Summative", "timing": "End of unit"})
         st.session_state.assessments = assessments
         st.rerun()
 

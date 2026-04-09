@@ -92,7 +92,7 @@ def build_diagnostic_prompt(selected_codes, existing_diagnostic=""):
 def build_assessment_prompt(selected_codes, assessments, existing_tasks, existing_summary):
     ctx = _build_context(selected_codes)
 
-    items_text = "\n".join(f"- {a['label']}: {a['type']} · {a['timing']}" for a in assessments)
+    items_text = "\n".join(f"- {a['label']}: {a['type']} · {a.get('reported', 'Summative')} · {a['timing']}" for a in assessments)
 
     task_instructions = []
     for a in assessments:
@@ -109,15 +109,27 @@ def build_assessment_prompt(selected_codes, assessments, existing_tasks, existin
                 if a["timing"] == "Mid-unit"
                 else "This is an END-OF-UNIT assessment — cover all waypoints in the unit."
             )
-            task_instructions.append(
-                f"OUTPUT {a['id']} — DRAFT: {a['label']} ({a['type']}, {a['timing']})\n"
-                f"{timing_note}\n"
-                f"Draft a complete assessment task with:\n"
-                f"  Section A — Xmin (~60%): compulsory, tests minimum construction\n"
-                f"  Section B — X+ (~30%): same concepts, broader integration\n"
-                f"  Section C — X++ (~10%): open-access transfer and synthesis\n"
-                f"Do not exceed Y-goals. Do not label any section as 'extension'."
-            )
+            reported = a.get("reported", "Summative")
+            if reported == "Formative":
+                task_instructions.append(
+                    f"OUTPUT {a['id']} — DRAFT: {a['label']} ({a['type']}, Formative, {a['timing']})\n"
+                    f"{timing_note}\n"
+                    f"Design a short formative checkpoint (10–15 minutes) that:\n"
+                    f"- Tests Xmin success criteria for waypoints covered so far\n"
+                    f"- Is not reported — framed as a learning check, not a grade\n"
+                    f"- Gives the teacher a quick class-level picture of gaps\n"
+                    f"- Uses low-stakes formats: exit ticket, quick sketch, short response, sorting task"
+                )
+            else:
+                task_instructions.append(
+                    f"OUTPUT {a['id']} — DRAFT: {a['label']} ({a['type']}, Summative, {a['timing']})\n"
+                    f"{timing_note}\n"
+                    f"Draft a complete assessment task with:\n"
+                    f"  Section A — Xmin (~60%): compulsory, tests minimum construction\n"
+                    f"  Section B — X+ (~30%): same concepts, broader integration\n"
+                    f"  Section C — X++ (~10%): open-access transfer and synthesis\n"
+                    f"Do not exceed Y-goals. Do not label any section as 'extension'."
+                )
 
     summary_instruction = (
         f"FINAL OUTPUT — REVISED SUMMARY\nExisting summary to review:\n{existing_summary}\nRevise to cover all assessment items above."
@@ -185,7 +197,7 @@ def build_lesson_prompt(code, node, friction, assessment_type, override_lessons,
     }.get(friction, "Use the core width task.")
 
     assessment_items_text = "\n".join(
-        f"- {a['label']}: {a['type']} · {a['timing']}" for a in assessments
+        f"- {a['label']}: {a['type']} · {a.get('reported', 'Summative')} · {a['timing']}" for a in assessments
     ) if assessments else f"- {assessment_type}"
 
     task_context = (

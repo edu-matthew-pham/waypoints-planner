@@ -54,7 +54,7 @@ def show():
     with st.expander("Paste existing tasks (optional)"):
         for a in assessments:
             val = st.text_area(
-                f"{a['label']} ({a['type']}, {a['timing']})",
+                f"{a['label']} ({a['type']}, {a.get('reported', 'Summative')}, {a['timing']})",
                 value=st.session_state.get(f"existing_task_{a['id']}", ""),
                 height=120,
                 placeholder=f"Paste existing {a['label']} task to review, or leave blank...",
@@ -86,7 +86,7 @@ def show():
 
     for a in assessments:
         task_val = st.text_area(
-            f"Output {a['id']}: {a['label']} ({a['type']}, {a['timing']})",
+            f"Output {a['id']}: {a['label']} ({a['type']}, {a.get('reported', 'Summative')}, {a['timing']})",
             value=st.session_state.get(f"finalised_task_{a['id']}", ""),
             height=160,
             placeholder=f"Paste Output {a['id']} — {a['label']} task here...",

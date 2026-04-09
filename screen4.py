@@ -261,6 +261,7 @@ def show():
                     diagnostic_ratings=diagnostic_ratings,
                     diagnostic_notes=diagnostic_notes
                 )
+                st.code(lesson_prompt, language=None)
                 st.caption("Copy and paste into Claude.ai, ChatGPT, or Gemini.")
 
             st.divider()
