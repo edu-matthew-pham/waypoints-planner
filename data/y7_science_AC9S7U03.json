@@ -26,7 +26,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can distinguish Earth's rotation from revolution and explain how axial tilt relates to observable changes across a year"
+        "y_description": "Students can distinguish Earth's rotation from revolution and explain how axial tilt relates to observable changes across a year",
+        "success_criteria": [
+          "Correctly distinguishes rotation from revolution",
+          "Links rotation to day/night and revolution to the year",
+          "Identifies that Earth's axis is tilted"
+        ]
       },
       {
         "id": 2,
@@ -48,7 +53,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can explain moon phases as a result of the moon's position relative to Earth and sun and sequence them correctly"
+        "y_description": "Students can explain moon phases as a result of the moon's position relative to Earth and sun and sequence them correctly",
+        "success_criteria": [
+          "Correctly sequences all 8 moon phases",
+          "Explains phases as caused by the moon's position, not Earth's shadow",
+          "Predicts the phase visible from a given moon position"
+        ]
       },
       {
         "id": 3,
@@ -70,7 +80,12 @@
           "AC9S7H01",
           "AC9S7H02"
         ],
-        "y_description": "Students can explain the conditions required for solar and lunar eclipses and why eclipses do not occur every month"
+        "y_description": "Students can explain the conditions required for solar and lunar eclipses and why eclipses do not occur every month",
+        "success_criteria": [
+          "States the conditions required for both solar and lunar eclipses",
+          "Correctly distinguishes umbra from penumbra",
+          "Explains why eclipses don't occur every month"
+        ]
       },
       {
         "id": 4,
@@ -91,7 +106,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can explain seasons as caused by axial tilt and correctly relate tilt to solar angle and day length at different latitudes"
+        "y_description": "Students can explain seasons as caused by axial tilt and correctly relate tilt to solar angle and day length at different latitudes",
+        "success_criteria": [
+          "Explains seasons as caused by axial tilt, not distance from the sun",
+          "Links tilt to solar angle and day length",
+          "Correctly identifies opposite seasons in Northern and Southern hemispheres"
+        ]
       },
       {
         "id": 5,
@@ -113,7 +133,12 @@
           "AC9S7H02",
           "AC9S7H04"
         ],
-        "y_description": "Students can explain tides as caused by the moon's gravitational pull and distinguish spring from neap tides by moon position"
+        "y_description": "Students can explain tides as caused by the moon's gravitational pull and distinguish spring from neap tides by moon position",
+        "success_criteria": [
+          "Explains tides as caused by the moon's gravitational pull",
+          "Correctly identifies spring and neap tides",
+          "Links spring and neap tides to moon positions"
+        ]
       }
     ]
   }

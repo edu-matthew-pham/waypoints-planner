@@ -24,7 +24,12 @@
           "AC9S7I04"
         ],
         "endeavour_links": [],
-        "y_description": "Students can distinguish pure substances from mixtures using particle diagrams and classify familiar materials correctly"
+        "y_description": "Students can distinguish pure substances from mixtures using particle diagrams and classify familiar materials correctly",
+        "success_criteria": [
+          "Correctly distinguishes pure substance from mixture using particle diagrams",
+          "Classifies 5 familiar materials correctly with justification",
+          "Identifies whether a mixture is homogeneous or heterogeneous"
+        ]
       },
       {
         "id": 2,
@@ -43,7 +48,12 @@
           "AC9S7I05"
         ],
         "endeavour_links": [],
-        "y_description": "Students can explain that separation techniques exploit differences in physical properties and match property differences to techniques"
+        "y_description": "Students can explain that separation techniques exploit differences in physical properties and match property differences to techniques",
+        "success_criteria": [
+          "States that separation exploits differences in physical properties",
+          "Correctly matches at least 3 property differences to separation techniques",
+          "Explains why a chosen technique would work for a given mixture"
+        ]
       },
       {
         "id": 3,
@@ -65,7 +75,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can perform or describe filtration and evaporation and justify their use for appropriate mixtures"
+        "y_description": "Students can perform or describe filtration and evaporation and justify their use for appropriate mixtures",
+        "success_criteria": [
+          "Correctly describes or performs filtration and evaporation",
+          "Identifies a mixture appropriate for each technique with property reasoning",
+          "Predicts the result of a separation procedure at the particle level"
+        ]
       },
       {
         "id": 4,
@@ -88,7 +103,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can describe the principles of distillation and chromatography and identify mixtures each technique is appropriate for"
+        "y_description": "Students can describe the principles of distillation and chromatography and identify mixtures each technique is appropriate for",
+        "success_criteria": [
+          "Describes the principle of distillation and chromatography",
+          "Identifies a mixture appropriate for each technique",
+          "Distinguishes when distillation is preferred over evaporation"
+        ]
       },
       {
         "id": 5,
@@ -112,7 +132,12 @@
           "AC9S7H03",
           "AC9S7H04"
         ],
-        "y_description": "Students can select and justify an appropriate separation technique for an unfamiliar mixture using property differences"
+        "y_description": "Students can select and justify an appropriate separation technique for an unfamiliar mixture using property differences",
+        "success_criteria": [
+          "Selects an appropriate technique for an unfamiliar mixture",
+          "Justifies the choice using property differences",
+          "Identifies at least one technique that would not work and explains why"
+        ]
       }
     ]
   }

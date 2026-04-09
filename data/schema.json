@@ -1,9 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "X–Y Unit Planner — Standard Node File",
+  "title": "X\u2013Y Unit Planner \u2014 Standard Node File",
   "description": "Schema for a single ACARA standard node map file. One file per standard, stored in data/.",
   "type": "object",
-  "required": ["year_level", "subject", "standard"],
+  "required": [
+    "year_level",
+    "subject",
+    "standard"
+  ],
   "properties": {
     "year_level": {
       "type": "string",
@@ -15,7 +19,14 @@
     },
     "standard": {
       "type": "object",
-      "required": ["code", "title", "description", "prior_knowledge", "y_goal", "nodes"],
+      "required": [
+        "code",
+        "title",
+        "description",
+        "prior_knowledge",
+        "y_goal",
+        "nodes"
+      ],
       "properties": {
         "code": {
           "type": "string",
@@ -35,7 +46,7 @@
         },
         "y_goal": {
           "type": "string",
-          "description": "Fixed conceptual endpoint for all students — the shared assessment target. Must not be exceeded."
+          "description": "Fixed conceptual endpoint for all students \u2014 the shared assessment target. Must not be exceeded."
         },
         "nodes": {
           "type": "array",
@@ -43,7 +54,19 @@
           "minItems": 4,
           "items": {
             "type": "object",
-            "required": ["id", "label", "y_description", "xmin", "width_core", "width_enrich_options", "hinge", "hinge_reason", "inquiry_links", "endeavour_links"],
+            "required": [
+              "id",
+              "label",
+              "y_description",
+              "xmin",
+              "width_core",
+              "width_enrich_options",
+              "hinge",
+              "hinge_reason",
+              "inquiry_links",
+              "endeavour_links",
+              "success_criteria"
+            ],
             "properties": {
               "id": {
                 "type": "integer",
@@ -55,30 +78,33 @@
               },
               "y_description": {
                 "type": "string",
-                "description": "Conceptual position reached at this node — framed as 'Students can...'. This is the Y-axis position."
+                "description": "Conceptual position reached at this node \u2014 framed as 'Students can...'. This is the Y-axis position."
               },
               "xmin": {
                 "type": "string",
-                "description": "Minimum construction required before advancing to the next node. Non-negotiable floor — certifies readiness."
+                "description": "Minimum construction required before advancing to the next node. Non-negotiable floor \u2014 certifies readiness."
               },
               "width_core": {
                 "type": "string",
-                "description": "X+ task — same concept as Xmin, broader integration and coordination. Standard construction for typical friction class."
+                "description": "X+ task \u2014 same concept as Xmin, broader integration and coordination. Standard construction for typical friction class."
               },
               "width_enrich_options": {
                 "type": "array",
-                "description": "X++ options — open-access transfer and application beyond taught examples. Drawn from ACARA elaborations. Teachers choose one or more.",
+                "description": "X++ options \u2014 open-access transfer and application beyond taught examples. Drawn from ACARA elaborations. Teachers choose one or more.",
                 "items": {
                   "type": "string"
                 }
               },
               "hinge": {
                 "type": "boolean",
-                "description": "True if this is a hinge concept — a node where misconceptions cluster, later nodes depend on it, and width investment here pays off disproportionately."
+                "description": "True if this is a hinge concept \u2014 a node where misconceptions cluster, later nodes depend on it, and width investment here pays off disproportionately."
               },
               "hinge_reason": {
-                "type": ["string", "null"],
-                "description": "Required if hinge is true. Explains why this node is a hinge — dependency, misconception gateway, assessment sensitivity. Null if hinge is false."
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Required if hinge is true. Explains why this node is a hinge \u2014 dependency, misconception gateway, assessment sensitivity. Null if hinge is false."
               },
               "inquiry_links": {
                 "type": "array",
@@ -93,6 +119,10 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "success_criteria": {
+                "type": "string",
+                "description": "Concise statement of what is demonstrated at this node \u2014 written in infinitive form (e.g. 'Correctly sequence moon phases and explain them as a positional relationship'). No 'I can' or 'Students can' prefix \u2014 the app adds this when rendering."
               }
             }
           }
@@ -102,11 +132,11 @@
   },
   "_notes": {
     "width_terminology": {
-      "Xmin": "Minimum construction — non-negotiable floor before advancing",
-      "X+": "Extended width — same concept, broader integration (width_core field)",
-      "X++": "Synthetic width — open-access transfer beyond taught examples (width_enrich_options field)"
+      "Xmin": "Minimum construction \u2014 non-negotiable floor before advancing",
+      "X+": "Extended width \u2014 same concept, broader integration (width_core field)",
+      "X++": "Synthetic width \u2014 open-access transfer beyond taught examples (width_enrich_options field)"
     },
-    "friction_effect": "Friction level determines which width level is recommended per node — it does not change the node sequence or Y-goal.",
+    "friction_effect": "Friction level determines which width level is recommended per node \u2014 it does not change the node sequence or Y-goal.",
     "file_naming": "Files should follow the pattern: {year_level}_{subject}_{code}.json e.g. y7_science_AC9S7U01.json",
     "adding_standards": "To add a new standard, create a new file in data/ following this schema. utils.py loads all files from data/ automatically."
   }

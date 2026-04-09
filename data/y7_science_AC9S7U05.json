@@ -26,7 +26,12 @@
         "endeavour_links": [
           "AC9S7H01"
         ],
-        "y_description": "Students can match particle diagrams to states of matter and state the key ideas of particle theory"
+        "y_description": "Students can match particle diagrams to states of matter and state the key ideas of particle theory",
+        "success_criteria": [
+          "Matches particle diagrams to correct states of matter",
+          "States the 4 key ideas of particle theory",
+          "Identifies differences in arrangement, motion and attraction across states"
+        ]
       },
       {
         "id": 2,
@@ -45,7 +50,12 @@
           "AC9S7I05"
         ],
         "endeavour_links": [],
-        "y_description": "Students can describe particle arrangement, motion and attraction for each state and explain observable properties using this model"
+        "y_description": "Students can describe particle arrangement, motion and attraction for each state and explain observable properties using this model",
+        "success_criteria": [
+          "Describes particle arrangement, motion and attraction for each state",
+          "Explains why solids hold shape and gases fill containers using particle theory",
+          "Correctly ranks substances by particle spacing"
+        ]
       },
       {
         "id": 3,
@@ -65,7 +75,12 @@
           "AC9S7I07"
         ],
         "endeavour_links": [],
-        "y_description": "Students can use particle theory to explain physical properties of substances including compressibility, viscosity and density"
+        "y_description": "Students can use particle theory to explain physical properties of substances including compressibility, viscosity and density",
+        "success_criteria": [
+          "Uses particle theory to explain at least 2 physical properties of a given substance",
+          "Explanation references arrangement, motion or attraction \u2014 not just state labels",
+          "Prediction matches published data for an unfamiliar substance"
+        ]
       },
       {
         "id": 4,
@@ -85,7 +100,12 @@
           "AC9S7I05"
         ],
         "endeavour_links": [],
-        "y_description": "Students can explain changes of state using particle theory and correctly identify energy input or output for each change"
+        "y_description": "Students can explain changes of state using particle theory and correctly identify energy input or output for each change",
+        "success_criteria": [
+          "Explains melting, freezing, evaporation and condensation using particle theory",
+          "Correctly identifies energy input or output for each change",
+          "Explains plateau regions in a heating/cooling curve"
+        ]
       },
       {
         "id": 5,
@@ -107,7 +127,11 @@
           "AC9S7H01",
           "AC9S7H02"
         ],
-        "y_description": "Students can identify the scope and limitations of the particle model and explain what evidence supports it"
+        "y_description": "Students can identify the scope and limitations of the particle model and explain what evidence supports it",
+        "success_criteria": [
+          "Identifies one phenomenon particle theory explains well and one it does not",
+          "Gives a reason for each based on the model's assumptions"
+        ]
       }
     ]
   }

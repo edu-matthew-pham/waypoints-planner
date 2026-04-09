@@ -26,7 +26,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can explain why classification is useful for organising and communicating about living things"
+        "y_description": "Students can explain why classification is useful for organising and communicating about living things",
+        "success_criteria": [
+          "Names at least two reasons why classification is useful",
+          "Gives a correct everyday example of classification",
+          "Distinguishes between classification for identification vs communication"
+        ]
       },
       {
         "id": 2,
@@ -47,7 +52,11 @@
         "endeavour_links": [
           "AC9S7H01"
         ],
-        "y_description": "Students can place organisms into major taxonomic groups using observable features and justify their classification"
+        "y_description": "Students can place organisms into major taxonomic groups using observable features and justify their classification",
+        "success_criteria": [
+          "Correctly places 5 familiar organisms into kingdoms with observable feature justification",
+          "Identifies at least one organism that is difficult to classify and explains why"
+        ]
       },
       {
         "id": 3,
@@ -66,7 +75,12 @@
           "AC9S7I04"
         ],
         "endeavour_links": [],
-        "y_description": "Students can use a dichotomous key to identify organisms by applying binary decisions based on observable features"
+        "y_description": "Students can use a dichotomous key to identify organisms by applying binary decisions based on observable features",
+        "success_criteria": [
+          "Follows all decision points in a provided key to reach correct identifications",
+          "Names the observable feature used at each decision point",
+          "Explains why an incorrect path leads to a wrong outcome"
+        ]
       },
       {
         "id": 4,
@@ -88,7 +102,12 @@
         "endeavour_links": [
           "AC9S7H01"
         ],
-        "y_description": "Students can construct a dichotomous key that correctly classifies a set of organisms using observable features"
+        "y_description": "Students can construct a dichotomous key that correctly classifies a set of organisms using observable features",
+        "success_criteria": [
+          "Constructs a key that correctly classifies all organisms in a given set",
+          "Key uses binary observable features at each decision point",
+          "Peer testing confirms key produces correct identifications"
+        ]
       },
       {
         "id": 5,
@@ -109,7 +128,11 @@
           "AC9S7H01",
           "AC9S7H03"
         ],
-        "y_description": "Students can explain how classification systems change in response to new evidence and evaluate what this reveals about scientific knowledge"
+        "y_description": "Students can explain how classification systems change in response to new evidence and evaluate what this reveals about scientific knowledge",
+        "success_criteria": [
+          "Names a real reclassification event and the evidence that caused it",
+          "Explains whether reclassification weakens or strengthens confidence in science"
+        ]
       }
     ]
   }

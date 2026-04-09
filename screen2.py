@@ -66,6 +66,10 @@ def show():
                 hinge_prefix = "⚑ HINGE — " if is_hinge else ""
                 st.markdown(f"**{hinge_prefix}Node {node['id']}: {node['label']}**")
                 st.caption(f"Y: {node['y_description']}")
+                if node.get("success_criteria"):
+                    st.markdown("**✓ Success criteria**")
+                    for sc in node["success_criteria"]:
+                        st.caption(f"• {sc}")
                 c1, c2, c3 = st.columns(3)
                 with c1:
                     st.markdown("**±Xmin**")

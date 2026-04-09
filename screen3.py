@@ -47,6 +47,18 @@ def show():
         hinge_text = "\n".join(hinge_nodes) if hinge_nodes else "None identified"
         y_goal_text = "\n".join(y_goals)
 
+        sc_lines = []
+        for code in selected_codes:
+            if code not in standards_map:
+                continue
+            for node in standards_map[code]["nodes"]:
+                sc = node.get("success_criteria", [])
+                if sc:
+                    sc_lines.append(f"Node {node['id']} ({code}) — {node['label']}:")
+                    for s in sc:
+                        sc_lines.append(f"  • {s}")
+        sc_text = "\n".join(sc_lines) if sc_lines else "None defined"
+
         if mode == "Draft new":
             task_instruction = """YOUR TASK
 ──────────────────────────────────
@@ -104,6 +116,10 @@ Y-GOALS (fixed conceptual endpoints — do not exceed these)
 HINGE CONCEPTS (must be adequately assessed)
 ──────────────────────────────────
 {hinge_text}
+
+SUCCESS CRITERIA PER NODE (Section A items must test these directly)
+──────────────────────────────────
+{sc_text}
 
 ASSESSMENT MODEL
 ──────────────────────────────────

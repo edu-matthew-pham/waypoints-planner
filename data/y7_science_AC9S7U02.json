@@ -26,7 +26,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can construct a food web and identify the roles of producers, consumers and decomposers including microorganisms"
+        "y_description": "Students can construct a food web and identify the roles of producers, consumers and decomposers including microorganisms",
+        "success_criteria": [
+          "Correctly places all organisms in a food web into producer, consumer or decomposer roles",
+          "Arrows show direction of energy flow, not just feeding relationships",
+          "Includes microorganisms in the decomposer role"
+        ]
       },
       {
         "id": 2,
@@ -45,7 +50,12 @@
           "AC9S7I05"
         ],
         "endeavour_links": [],
-        "y_description": "Students can explain the direction and loss of energy through trophic levels and distinguish energy flow from matter cycling"
+        "y_description": "Students can explain the direction and loss of energy through trophic levels and distinguish energy flow from matter cycling",
+        "success_criteria": [
+          "States that energy is lost at each trophic level",
+          "Correctly distinguishes energy flow from matter cycling in an explanation",
+          "Traces the direction of energy through at least 3 trophic levels"
+        ]
       },
       {
         "id": 3,
@@ -66,7 +76,12 @@
         "endeavour_links": [
           "AC9S7H03"
         ],
-        "y_description": "Students can predict and explain how a change to an abiotic factor cascades through populations in a food web"
+        "y_description": "Students can predict and explain how a change to an abiotic factor cascades through populations in a food web",
+        "success_criteria": [
+          "Correctly defines abiotic factor and gives 3 examples",
+          "Predicts the effect of one abiotic change on one population with reasoning",
+          "Identifies at least one other population affected by the cascade"
+        ]
       },
       {
         "id": 4,
@@ -89,7 +104,12 @@
           "AC9S7H03",
           "AC9S7H04"
         ],
-        "y_description": "Students can predict and explain how a change to a biotic factor cascades through populations in a food web"
+        "y_description": "Students can predict and explain how a change to a biotic factor cascades through populations in a food web",
+        "success_criteria": [
+          "Correctly defines biotic factor and gives 3 examples",
+          "Predicts the effect of removing one species with food web reasoning",
+          "Identifies at least two cascade effects beyond the immediate population"
+        ]
       },
       {
         "id": 5,
@@ -111,7 +131,11 @@
           "AC9S7H01",
           "AC9S7H03"
         ],
-        "y_description": "Students can evaluate the limitations of food web models and explain how these affect the reliability of predictions"
+        "y_description": "Students can evaluate the limitations of food web models and explain how these affect the reliability of predictions",
+        "success_criteria": [
+          "Identifies at least one limitation of food web models",
+          "Explains how that limitation affects the reliability of a specific prediction"
+        ]
       }
     ]
   }

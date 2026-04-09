@@ -206,6 +206,10 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
             ]))
             story.append(ht)
             story.append(Paragraph(f"Y: {node.get('y_description', '')}", s_small))
+            if node.get("success_criteria"):
+                story.append(Paragraph("✓ Success criteria:", s_small))
+                for sc in node["success_criteria"]:
+                    story.append(Paragraph("• " + sc, s_small))
 
             enrich_text = ("<br/>".join("• " + o for o in enrich_opts)
                           if enrich_opts else "<i>No enrichment options defined.</i>")

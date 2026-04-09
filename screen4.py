@@ -140,6 +140,10 @@ def show():
             else:
                 st.markdown(f"**{label}**")
             st.caption(f"Y: {node['y_description']}")
+            if node.get("success_criteria"):
+                st.markdown("**✓ Success criteria**")
+                for sc in node["success_criteria"]:
+                    st.caption(f"• {sc}")
 
             c1, c2, c3 = st.columns(3)
             with c1:
@@ -194,6 +198,18 @@ def show():
                     if assessment_summary.strip() else ""
                 )
 
+                # Build friction-aware success criteria
+                sc_xmin = node.get("success_criteria", [])
+                sc_lines = ["Xmin (target for all students):"]
+                sc_lines += ["- " + sc for sc in sc_xmin]
+                if friction in ["Typical", "Low"] and node.get("width_core"):
+                    sc_lines += ["", "X+ (target for this class — core width):"]
+                    sc_lines += ["- Demonstrate: " + node["width_core"]]
+                if friction == "Low" and enrich_opts:
+                    sc_lines += ["", "X++ (target for this class — enrichment):"]
+                    sc_lines += ["- Demonstrate: " + enrich_opts[0]]
+                sc_text_prompt = "\n".join(sc_lines)
+
                 lesson_prompt = f"""You are helping a Year 7 Science teacher plan lessons for a single conceptual node.
 
 CONTEXT
@@ -205,9 +221,13 @@ Class Friction: {friction}
 Assessment Type: {assessment_type}
 Lessons available: {override_lessons}
 
-CONCEPTUAL POSITION (Y)
+CONCEPTUAL POSITION (Y) — overarching learning intention for this node
 ──────────────────────────────────
 {node['y_description']}
+
+SUCCESS CRITERIA (friction-adjusted for {friction} class)
+──────────────────────────────────
+{sc_text_prompt}
 
 MINIMUM CONSTRUCTION (±Xmin)
 ──────────────────────────────────
@@ -231,12 +251,19 @@ ASSESSMENT CONTEXT
 
 YOUR TASK
 ──────────────────────────────────
-Generate a lesson sequence for {override_lessons} lesson(s) covering this node. For each lesson include:
-- Learning intention aligned to the Y position above
-- Starter activity (5–10 min)
-- Main activity aligned to the appropriate width level for this friction class
-- Formative check (exit ticket or cold call questions)
-- Any misconceptions to watch for and how to address them
+Planning structure:
+- Learning intention (shared across all lessons for this node): the node Y description above — do not rewrite or decompose it
+- Success criteria: distributed across lessons as targets; each lesson targets one or more from the list above
+- Formative check: directly tests the success criterion(a) targeted in that lesson
+
+Generate a lesson sequence for {override_lessons} lesson(s). For each lesson use this structure:
+
+1. Learning intention — the node Y description (same for all lessons, all classes)
+2. Success criterion(a) targeted this lesson — named from the friction-adjusted list above
+3. Starter activity (5–10 min)
+4. Main activity aligned to the appropriate width level for this friction class
+5. Formative check — directly tests the success criterion(a) named in step 2
+6. Misconceptions to watch for and how to address them
 
 Keep all activities within the conceptual scope of this node. Do not introduce content from later nodes."""
 
@@ -244,5 +271,3 @@ Keep all activities within the conceptual scope of this node. Do not introduce c
                 st.caption("Copy and paste into Claude.ai, ChatGPT, or Gemini.")
 
             st.divider()
-
-

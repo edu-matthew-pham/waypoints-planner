@@ -27,7 +27,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can represent forces on an object as vectors showing correct magnitude and direction and name the forces"
+        "y_description": "Students can represent forces on an object as vectors showing correct magnitude and direction and name the forces",
+        "success_criteria": [
+          "Represents at least 2 forces on an object with correct arrow direction and relative size",
+          "Names each force represented",
+          "Diagram is consistent with the described scenario"
+        ]
       },
       {
         "id": 2,
@@ -49,7 +54,12 @@
         "endeavour_links": [
           "AC9S7H03"
         ],
-        "y_description": "Students can identify whether forces on an object are balanced or unbalanced and predict the resulting motion state"
+        "y_description": "Students can identify whether forces on an object are balanced or unbalanced and predict the resulting motion state",
+        "success_criteria": [
+          "Correctly identifies balanced vs unbalanced forces in a given diagram",
+          "States that balanced forces mean no change in motion",
+          "Predicts the motion state from a force diagram"
+        ]
       },
       {
         "id": 3,
@@ -71,7 +81,12 @@
         "endeavour_links": [
           "AC9S7H02"
         ],
-        "y_description": "Students can explain that unbalanced forces cause a change in motion and represent this with force diagrams"
+        "y_description": "Students can explain that unbalanced forces cause a change in motion and represent this with force diagrams",
+        "success_criteria": [
+          "States that unbalanced forces cause a change in motion",
+          "Gives 2 examples with correct force diagrams",
+          "Identifies both speed and direction as possible changes"
+        ]
       },
       {
         "id": 4,
@@ -93,7 +108,12 @@
         "endeavour_links": [
           "AC9S7H01"
         ],
-        "y_description": "Students can distinguish mass from weight, explain gravitational force as dependent on mass, and calculate weight from mass"
+        "y_description": "Students can distinguish mass from weight, explain gravitational force as dependent on mass, and calculate weight from mass",
+        "success_criteria": [
+          "Correctly distinguishes mass from weight with definitions",
+          "Calculates weight correctly given mass and g",
+          "Explains gravitational force as dependent on mass"
+        ]
       },
       {
         "id": 5,
@@ -115,7 +135,12 @@
         "endeavour_links": [
           "AC9S7H03"
         ],
-        "y_description": "Students can describe the qualitative relationship between force, mass and acceleration and interpret data from force investigations"
+        "y_description": "Students can describe the qualitative relationship between force, mass and acceleration and interpret data from force investigations",
+        "success_criteria": [
+          "States the qualitative relationship between force, mass and acceleration",
+          "Correctly predicts which object accelerates more under the same force",
+          "Identifies the pattern in data from a force investigation"
+        ]
       }
     ]
   }
