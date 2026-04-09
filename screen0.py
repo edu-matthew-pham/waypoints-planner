@@ -34,7 +34,7 @@ def show():
 </style>
 
 <div class="hero-wrap">
-  <h1 class="hero-title">Keep every class on the<br><em>same conceptual path.</em></h1>
+  <h1 class="hero-title">Keep every class on the<br><em>same conceptual path</em></h1>
   <p class="hero-sub">
     When classes move at different speeds, the usual fix (accelerating some, simplifying for others)
     breaks alignment and makes common assessment hard to justify.
