@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from utils import (standards_map, science_band, classify_friction, get_prior_chain,
                    width_emphasis, width_level_label, node_lesson_budget)
+from prompts import build_lesson_prompt
 
 def show():
     selected_codes = st.session_state.selected_codes
@@ -243,138 +244,23 @@ def show():
                     key=f"lessons_{node_key}"
                 )
 
-                enrich_text = (
-                    "\n".join("- " + o for o in enrich_opts)
-                    if enrich_opts else "Not applicable at this friction level."
-                )
-                hinge_note = (
-                    f"\nIMPORTANT — This is a hinge concept: {node['hinge_reason']}"
-                    if is_hinge else ""
-                )
-                friction_lesson_guidance = {
-                    "Low": "Students are likely to move quickly. Prioritise enrichment options to deepen construction. Avoid racing ahead to the next node.",
-                    "Typical": "Maintain minimum width at this waypoint. Use the core width task. Add enrichment only if time allows.",
-                    "Medium–High": "Stay near Xmin. Use targeted supports — worked examples, misconception repair, structured sentence starters. Do not widen prematurely."
-                }.get(friction, "Use the core width task.")
-
-                # Build assessment context from all items
-                assessments = st.session_state.get("assessments", [])
-                assessment_items_text = "\n".join(
-                    f"- {a['label']}: {a['type']} · {a['timing']}"
-                    for a in assessments
-                ) if assessments else f"- {assessment_type}"
-
+                assessments_list = st.session_state.get("assessments", [])
                 assessment_summary = st.session_state.get("assessment_summary", "")
-                task_context = (
-                    f"\nASSESSMENT SUMMARY\n" + "─" * 34 + f"\n{assessment_summary}"
-                    if assessment_summary.strip() else ""
-                )
-
-                # Prior knowledge chain with diagnostic ratings
-                prior_chain = get_prior_chain(code)
                 diagnostic_ratings = st.session_state.get("diagnostic_ratings", {})
                 diagnostic_notes = st.session_state.get("diagnostic_notes", "")
-                prior_chain_lines = []
-                for item in prior_chain:
-                    key = f"diag_{code}_{item['code']}"
-                    rating = diagnostic_ratings.get(key, "Not rated")
-                    prior_chain_lines.append(
-                        f"Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']} [{rating}]"
-                    )
-                prior_chain_text = "\n".join(prior_chain_lines) if prior_chain_lines else "No prior pathway found."
-                if diagnostic_notes.strip():
-                    prior_chain_text += f"\nDiagnostic notes: {diagnostic_notes}"
 
-                # All Y7 waypoints for this standard with diagnostic ratings
-                y7_waypoint_lines = []
-                for n in standards_map[code]["nodes"]:
-                    nkey = f"diag_y7_{code}_node_{n['id']}"
-                    nrating = diagnostic_ratings.get(nkey, "🔴 Gap")
-                    marker = " → THIS WAYPOINT" if n["id"] == node["id"] else ""
-                    y7_waypoint_lines.append(f"Waypoint {n['id']}: {n['label']} [{nrating}]{marker}")
-                y7_waypoints_text = "\n".join(y7_waypoint_lines)
-
-
-
-                # Build friction-aware success criteria
-                sc_xmin = node.get("success_criteria", [])
-                sc_lines = ["Xmin (target for all students):"]
-                sc_lines += ["- " + sc for sc in sc_xmin]
-                if friction in ["Typical", "Low"] and node.get("width_core"):
-                    sc_lines += ["", "X+ (target for this class — core width):"]
-                    sc_lines += ["- Demonstrate: " + node["width_core"]]
-                if friction == "Low" and enrich_opts:
-                    sc_lines += ["", "X++ (target for this class — enrichment):"]
-                    sc_lines += ["- Demonstrate: " + enrich_opts[0]]
-                sc_text_prompt = "\n".join(sc_lines)
-
-                lesson_prompt = f"""You are helping a Year 7 Science teacher plan lessons for a single conceptual waypoint.
-
-CONTEXT
-──────────────────────────────────
-Subject: Year 7 Science
-Standard: {code}
-Waypoint: {node['id']}. {node['label']}
-Class Friction: {friction}
-Assessment Type: {assessment_type}
-Lessons available: {override_lessons}
-
-CONCEPTUAL POSITION (Y) — overarching learning intention for this waypoint
-──────────────────────────────────
-{node['y_description']}
-
-PRIOR KNOWLEDGE (what students already know coming into this unit)
-──────────────────────────────────
-{prior_chain_text}
-
-Y7 WAYPOINT PROGRESS (intra-unit dependencies for {code})
-──────────────────────────────────
-{y7_waypoints_text}
-
-SUCCESS CRITERIA (friction-adjusted for {friction} class)
-──────────────────────────────────
-{sc_text_prompt}
-
-MINIMUM CONSTRUCTION (±Xmin)
-──────────────────────────────────
-{node['xmin']}
-
-CORE WIDTH TASK
-──────────────────────────────────
-{core_task}
-
-ENRICHMENT OPTIONS
-──────────────────────────────────
-{enrich_text}{hinge_note}
-
-FRICTION GUIDANCE
-──────────────────────────────────
-{friction_lesson_guidance}
-
-ASSESSMENT CONTEXT
-──────────────────────────────────
-Assessment items for this unit:
-{assessment_items_text}{task_context}
-
-YOUR TASK
-──────────────────────────────────
-Planning structure:
-- Learning intention (shared across all lessons for this waypoint): the waypoint Y description above — do not rewrite or decompose it
-- Success criteria: distributed across lessons as targets; each lesson targets one or more from the list above
-- Formative check: directly tests the success criterion(a) targeted in that lesson
-
-Generate a lesson sequence for {override_lessons} lesson(s). For each lesson use this structure:
-
-1. Learning intention — the waypoint Y description (same for all lessons, all classes)
-2. Success criterion(a) targeted this lesson — named from the friction-adjusted list above
-3. Starter activity (5–10 min)
-4. Main activity aligned to the appropriate width level for this friction class
-5. Formative check — directly tests the success criterion(a) named in step 2
-6. Misconceptions to watch for and how to address them
-
-Keep all activities within the conceptual scope of this waypoint. Do not introduce content from later waypoints."""
-
-                st.code(lesson_prompt, language=None)
+                lesson_prompt = build_lesson_prompt(
+                    code=code,
+                    node=node,
+                    friction=friction,
+                    assessment_type=assessment_type,
+                    override_lessons=override_lessons,
+                    enrich_opts=enrich_opts,
+                    assessments=assessments_list,
+                    assessment_summary=assessment_summary,
+                    diagnostic_ratings=diagnostic_ratings,
+                    diagnostic_notes=diagnostic_notes
+                )
                 st.caption("Copy and paste into Claude.ai, ChatGPT, or Gemini.")
 
             st.divider()
