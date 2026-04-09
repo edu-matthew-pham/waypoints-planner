@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils import (standards_map, science_band, classify_friction,
+from utils import (standards_map, science_band, classify_friction, get_prior_chain,
                    width_emphasis, width_level_label, node_lesson_budget)
 
 def show():
@@ -198,6 +198,13 @@ def show():
                     if assessment_summary.strip() else ""
                 )
 
+                # Prior knowledge chain for this standard
+                prior_chain = get_prior_chain(code)
+                prior_chain_text = "\n".join(
+                    f"Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']}"
+                    for item in prior_chain
+                ) if prior_chain else "No prior pathway found."
+
                 # Build friction-aware success criteria
                 sc_xmin = node.get("success_criteria", [])
                 sc_lines = ["Xmin (target for all students):"]
@@ -224,6 +231,10 @@ Lessons available: {override_lessons}
 CONCEPTUAL POSITION (Y) — overarching learning intention for this node
 ──────────────────────────────────
 {node['y_description']}
+
+PRIOR KNOWLEDGE (what students already know coming into this unit)
+──────────────────────────────────
+{prior_chain_text}
 
 SUCCESS CRITERIA (friction-adjusted for {friction} class)
 ──────────────────────────────────

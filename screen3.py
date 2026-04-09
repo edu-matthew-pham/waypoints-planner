@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import standards_map, generate_pdf
+from utils import standards_map, get_prior_chain, generate_pdf
 
 def show():
     selected_codes = st.session_state.selected_codes
@@ -46,6 +46,16 @@ def show():
 
         hinge_text = "\n".join(hinge_nodes) if hinge_nodes else "None identified"
         y_goal_text = "\n".join(y_goals)
+
+        # Build prior knowledge chain
+        prior_lines = []
+        for code in selected_codes:
+            chain = get_prior_chain(code)
+            if chain:
+                prior_lines.append(f"{code} prior pathway:")
+                for item in chain:
+                    prior_lines.append(f"  Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']}")
+        prior_text = "\n".join(prior_lines) if prior_lines else "No prior pathway found."
 
         sc_lines = []
         for code in selected_codes:
@@ -112,6 +122,10 @@ Standards: {', '.join(selected_codes)}
 Y-GOALS (fixed conceptual endpoints — do not exceed these)
 ──────────────────────────────────
 {y_goal_text}
+
+PRIOR KNOWLEDGE PATHWAY (what students already know coming into this unit)
+──────────────────────────────────
+{prior_text}
 
 HINGE CONCEPTS (must be adequately assessed)
 ──────────────────────────────────
