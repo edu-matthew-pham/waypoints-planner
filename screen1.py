@@ -2,6 +2,9 @@ import streamlit as st
 from utils import data, standards_map, compression_warnings
 
 def show():
+    if st.button("← Welcome"):
+        st.session_state.page = "s0_welcome"
+        st.rerun()
     st.subheader("Curriculum Setup")
     st.caption("Select standards, lesson count and assessment items for this unit.")
 

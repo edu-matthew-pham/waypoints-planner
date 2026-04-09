@@ -1,26 +1,55 @@
 import streamlit as st
-import base64
-import os
 
 def show():
-    st.subheader("Welcome to Learning Waypoints")
-    st.caption("Read the guide below before getting started.")
+    st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
-    # Embed onboarding PDF if it exists
-    pdf_path = "learning_waypoints_onboarding.pdf"
-    if os.path.exists(pdf_path):
-        with open(pdf_path, "rb") as f:
-            b64 = base64.b64encode(f.read()).decode()
-        st.markdown(
-            f'<iframe src="data:application/pdf;base64,{b64}" width="100%" height="600px"></iframe>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.info("Place `learning_waypoints_onboarding.pdf` in the app root folder to display the guide here.")
+.hero-wrap {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 0.5rem 3rem;
+    text-align: center;
+}
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    color: #0f1f17;
+    margin-bottom: 1.4rem;
+    font-weight: 400;
+}
+.hero-title em {
+    font-style: italic;
+    color: #2e6e4e;
+}
+.hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #3a4a40;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+}
+</style>
 
-    st.divider()
-    col_a, col_b, col_c = st.columns([2, 1, 2])
+<div class="hero-wrap">
+  <h1 class="hero-title">Keep every class on the<br><em>same conceptual path.</em></h1>
+  <p class="hero-sub">
+    When classes move at different speeds, the usual fix (accelerating some, simplifying for others)
+    breaks alignment and makes common assessment hard to justify.
+  </p>
+  <p class="hero-sub">
+    Learning Waypoints manages pace differences horizontally, not by racing ahead or falling behind.
+  </p>
+</div>
+""", unsafe_allow_html=True)
+
+    pdf_url = "https://raw.githubusercontent.com/edu-matthew-pham/friction-project/main/learning_waypoints_onboarding.pdf"
+
+    col_a, col_b, col_c = st.columns(3)
     with col_b:
         if st.button("Get Started →", type="primary", use_container_width=True):
             st.session_state.page = "s1_curriculum"
             st.rerun()
+        st.link_button("Read the guide →", pdf_url, use_container_width=True)
