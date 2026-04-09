@@ -77,6 +77,42 @@ def show():
 
     st.divider()
 
+    # ── Diagnostic results ────────────────────────────────────────────────────
+    st.subheader("Diagnostic Results")
+    st.caption("Rate each prior knowledge standard based on diagnostic task results. This informs early node pacing.")
+
+    if "diagnostic_ratings" not in st.session_state:
+        st.session_state.diagnostic_ratings = {}
+
+    traffic_options = ["🟢 Secure", "🟡 Partial", "🔴 Gap"]
+
+    for code in selected_codes:
+        chain = get_prior_chain(code)
+        if not chain:
+            continue
+        with st.expander(f"Prior pathway for {code}", expanded=False):
+            for item in chain:
+                key = f"diag_{code}_{item['code']}"
+                current = st.session_state.diagnostic_ratings.get(key, "🟡 Partial")
+                rating = st.radio(
+                    f"**Year {item['year_level']} · {item['code']}** — {item['y_goal']}",
+                    traffic_options,
+                    index=traffic_options.index(current),
+                    horizontal=True,
+                    key=f"radio_{key}"
+                )
+                st.session_state.diagnostic_ratings[key] = rating
+
+    diagnostic_notes = st.text_area(
+        "Diagnostic notes (optional)",
+        value=st.session_state.get("diagnostic_notes", ""),
+        height=80,
+        placeholder="Overall observations from the diagnostic — misconceptions, surprises, patterns..."
+    )
+    st.session_state["diagnostic_notes"] = diagnostic_notes
+
+    st.divider()
+
     total_nodes = sum(len(standards_map[c]["nodes"]) for c in selected_codes if c in standards_map)
     base_lessons = num_lessons / total_nodes if total_nodes else 1
 
@@ -200,12 +236,20 @@ def show():
                     if assessment_summary.strip() else ""
                 )
 
-                # Prior knowledge chain for this standard
+                # Prior knowledge chain with diagnostic ratings
                 prior_chain = get_prior_chain(code)
-                prior_chain_text = "\n".join(
-                    f"Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']}"
-                    for item in prior_chain
-                ) if prior_chain else "No prior pathway found."
+                diagnostic_ratings = st.session_state.get("diagnostic_ratings", {})
+                diagnostic_notes = st.session_state.get("diagnostic_notes", "")
+                prior_chain_lines = []
+                for item in prior_chain:
+                    key = f"diag_{code}_{item['code']}"
+                    rating = diagnostic_ratings.get(key, "Not rated")
+                    prior_chain_lines.append(
+                        f"Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']} [{rating}]"
+                    )
+                prior_chain_text = "\n".join(prior_chain_lines) if prior_chain_lines else "No prior pathway found."
+                if diagnostic_notes.strip():
+                    prior_chain_text += f"\nDiagnostic notes: {diagnostic_notes}"
 
                 # Build friction-aware success criteria
                 sc_xmin = node.get("success_criteria", [])

@@ -126,6 +126,57 @@ Provide one output per assessment item, then a combined summary.
 {summary_instruction}"""
 
 
+def build_diagnostic_prompt(selected_codes, existing_diagnostic=""):
+    ctx = build_context(selected_codes)
+
+    if existing_diagnostic.strip():
+        task_instruction = f"""EXISTING DIAGNOSTIC TASK TO REVIEW
+──────────────────────────────────
+{existing_diagnostic}
+
+YOUR TASK
+──────────────────────────────────
+Review and improve the existing diagnostic task. Ensure it:
+- Targets prior knowledge from the pathway above, not Y7 content
+- Is completable in 10–15 minutes
+- Surfaces common misconceptions and gaps
+- Generates actionable information for the teacher"""
+    else:
+        task_instruction = """YOUR TASK
+──────────────────────────────────
+Design a short pre-unit diagnostic task (10–15 minutes) that:
+- Targets prior knowledge from the pathway above, not Y7 content
+- Surfaces what students already know and common misconceptions
+- Is accessible to all students regardless of prior achievement
+- Generates actionable information: teacher can identify students who need more consolidation at early nodes
+- Is not a test — frame it as a curiosity or thinking task"""
+
+    return f"""You are helping a Year 7 Science teacher design a pre-unit diagnostic assessment.
+
+CONTEXT
+──────────────────────────────────
+Year Level: 7
+Subject: Science
+Standards: {', '.join(selected_codes)}
+
+PURPOSE
+──────────────────────────────────
+This diagnostic is completed BEFORE teaching begins. It informs:
+- Where students actually are relative to assumed prior knowledge
+- Which early nodes may need more consolidation time
+- Initial friction/pace estimate for the class
+
+PRIOR KNOWLEDGE PATHWAY (what this diagnostic should probe)
+──────────────────────────────────
+{ctx['prior_text']}
+
+Y-GOALS FOR THIS UNIT (do NOT assess these — they are the teaching destination)
+──────────────────────────────────
+{ctx['y_goal_text']}
+
+{task_instruction}"""
+
+
 def show():
     selected_codes = st.session_state.selected_codes
     assessments = st.session_state.get("assessments", [])
@@ -136,6 +187,38 @@ def show():
 
     st.subheader("Assessment Setup")
     st.caption(f"Standards: {', '.join(selected_codes)} · {len(assessments)} assessment item(s)")
+
+    # ── Diagnostic ───────────────────────────────────────────────────────────
+    st.subheader("Diagnostic Assessment")
+    st.caption("Pre-unit task to probe prior knowledge before teaching begins. Informs starting point and pace profile.")
+
+    existing_diagnostic = st.text_area(
+        "Existing diagnostic task (optional)",
+        value=st.session_state.get("existing_diagnostic", ""),
+        height=100,
+        placeholder="Paste existing diagnostic to review, or leave blank to draft new..."
+    )
+    st.session_state["existing_diagnostic"] = existing_diagnostic
+
+    if st.button("Generate Diagnostic Prompt", use_container_width=True):
+        st.session_state["last_diagnostic_prompt"] = build_diagnostic_prompt(
+            selected_codes, existing_diagnostic
+        )
+
+    if st.session_state.get("last_diagnostic_prompt"):
+        st.code(st.session_state["last_diagnostic_prompt"], language=None)
+        st.caption("Copy and paste into Claude.ai, ChatGPT, or Gemini.")
+
+    diagnostic_task = st.text_area(
+        "Diagnostic task (paste AI output)",
+        value=st.session_state.get("diagnostic_task", ""),
+        height=120,
+        placeholder="Paste the diagnostic task here...",
+        label_visibility="collapsed"
+    )
+    st.session_state["diagnostic_task"] = diagnostic_task
+
+    st.divider()
 
     # ── Step 1: Generate combined prompt ─────────────────────────────────────
     st.subheader("Step 1 — Generate Assessment Prompt")
