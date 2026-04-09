@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Science Y-Goals Progression Map Schema",
+  "description": "Schema for science_y_goals_map.json \u2014 the backbone progression reference covering all year levels from Foundation to 10. Used for prior knowledge lookups across the chain. Each entry contains the ACARA descriptor and the interpreted Y-goal for the tool.",
+  "type": "object",
+  "required": [
+    "description",
+    "year_levels"
+  ],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of what this file contains."
+    },
+    "year_levels": {
+      "type": "object",
+      "description": "Keyed by year level string (e.g. '7', '6', '5'). Add year levels progressively as they are curated.",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "subject",
+          "standards"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "Subject area. e.g. 'Science'"
+          },
+          "standards": {
+            "type": "array",
+            "description": "List of ACARA content descriptors for this year level.",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "title",
+                "description",
+                "y_goal"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "ACARA content descriptor code. e.g. 'AC9S6U01'"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Short title for the standard."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Verbatim ACARA content descriptor text."
+                },
+                "y_goal": {
+                  "type": "string",
+                  "description": "Interpreted conceptual endpoint \u2014 framed as 'Students...' Derived from the ACARA descriptor and elaborations. This is the Y-goal for prior knowledge lookup purposes."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "progression_threads": {
+      "type": "object",
+      "description": "Conceptual progression trees from Foundation to Year 10, organised by science strand. Foundation standards are roots; each node lists its children representing the next conceptual step.",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "strands": {
+          "type": "object",
+          "description": "Keyed by strand name (e.g. 'biological', 'physical', 'chemical', 'earth_space').",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "label",
+              "tree"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Human-readable strand name."
+              },
+              "tree": {
+                "type": "array",
+                "description": "Root nodes for this strand.",
+                "items": {
+                  "$ref": "#/$defs/progression_node"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "_notes": {
+    "usage": "Referenced by the app for prior knowledge context in lesson prompts and assessment prompts. Not referenced by individual standard unit files \u2014 lookup goes directly to this map.",
+    "extension": "Add year levels progressively working backwards from Y7. Full unit files (with nodes, width menus, success criteria) are separate \u2014 this map only needs descriptor + Y-goal.",
+    "naming": "File should always be named science_y_goals_map.json and live in data/"
+  },
+  "$defs": {
+    "progression_node": {
+      "type": "object",
+      "required": [
+        "code",
+        "children"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "ACARA content descriptor code."
+        },
+        "children": {
+          "type": "array",
+          "description": "Standards that build directly on this one.",
+          "items": {
+            "$ref": "#/$defs/progression_node"
+          }
+        }
+      }
+    }
+  }
+}

@@ -121,10 +121,22 @@
                 }
               },
               "success_criteria": {
-                "type": "string",
-                "description": "Concise statement of what is demonstrated at this node \u2014 written in infinitive form (e.g. 'Correctly sequence moon phases and explain them as a positional relationship'). No 'I can' or 'Students can' prefix \u2014 the app adds this when rendering."
+                "type": "array",
+                "description": "2-3 assessable evidence statements anchored to Xmin threshold. Each describes what a teacher would look for in student work to confirm the waypoint is met. Written as observable, measurable indicators \u2014 not restatements of the concept.",
+                "minItems": 2,
+                "maxItems": 3,
+                "items": {
+                  "type": "string"
+                }
               }
             }
+          }
+        },
+        "prior_y_goals": {
+          "type": "array",
+          "description": "ACARA content descriptor codes from prior year levels that this standard builds on. Each referenced descriptor has its own Y-goal which provides the conceptual foundation. e.g. ['AC9S6U01', 'AC9S6U02']",
+          "items": {
+            "type": "string"
           }
         }
       }

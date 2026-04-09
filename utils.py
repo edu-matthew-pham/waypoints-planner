@@ -9,7 +9,8 @@ import glob
 def load_nodes():
     standards = []
     for fpath in sorted(glob.glob(os.path.join("data", "*.json"))):
-        if os.path.basename(fpath) == "schema.json":
+        fname = os.path.basename(fpath)
+        if fname in ("schema.json", "science_y_goals_map.json", "science_y_goals_map_schema.json"):
             continue
         with open(fpath) as f:
             d = json.load(f)

@@ -1,0 +1,697 @@
+{
+  "description": "Science Y-goals progression map \u2014 descriptor codes, ACARA descriptions and Y-goals by year level. Used for prior knowledge lookups across the progression chain.",
+  "year_levels": {
+    "7": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S7U01",
+          "title": "Classification and Biodiversity",
+          "description": "Investigate the role of classification in ordering and organising the diversity of life on Earth and use and develop classification tools including dichotomous keys",
+          "y_goal": "Students explain why classification systems are used, apply and construct dichotomous keys, and evaluate how classification tools order and organise biodiversity."
+        },
+        {
+          "code": "AC9S7U02",
+          "title": "Food Webs and Ecosystems",
+          "description": "Use models, including food webs, to represent matter and energy flow in ecosystems and predict the impact of changing abiotic and biotic factors on populations",
+          "y_goal": "Students use food web models to represent matter and energy flow, and predict and explain population impacts of changes to abiotic and biotic factors."
+        },
+        {
+          "code": "AC9S7U03",
+          "title": "Earth-Sun-Moon System",
+          "description": "Model cyclic changes in the relative positions of the Earth, sun and moon and explain how these cycles cause eclipses and influence predictable phenomena on Earth, including seasons and tides",
+          "y_goal": "Students model and explain how cyclic changes in Earth-sun-moon positions cause eclipses, seasons and tides."
+        },
+        {
+          "code": "AC9S7U04",
+          "title": "Forces and Motion",
+          "description": "Investigate and represent balanced and unbalanced forces, including gravitational force, acting on objects, and relate changes in an object's motion to its mass and the magnitude and direction of forces acting on it",
+          "y_goal": "Students represent and explain how balanced and unbalanced forces, including gravity, relate to changes in an object's motion in terms of mass, magnitude and direction."
+        },
+        {
+          "code": "AC9S7U05",
+          "title": "Particle Theory and Properties",
+          "description": "Use particle theory to describe the arrangement of particles in a substance, including the motion of and attraction between particles, and relate this to the properties of the substance",
+          "y_goal": "Students use particle theory to explain and predict the physical properties of substances in terms of particle arrangement, motion and attraction."
+        },
+        {
+          "code": "AC9S7U06",
+          "title": "Pure Substances and Mixtures",
+          "description": "Use a particle model to describe differences between pure substances and mixtures and apply understanding of properties of substances to separate mixtures",
+          "y_goal": "Students use a particle model to explain the difference between pure substances and mixtures, and select and apply appropriate separation techniques based on properties of substances."
+        }
+      ]
+    },
+    "6": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S6U01",
+          "title": "Habitats and Living Things",
+          "description": "Investigate the physical conditions of a habitat and analyse how the growth and survival of living things is affected by changing physical conditions",
+          "y_goal": "Students analyse how physical conditions of a habitat affect the growth and survival of living things, and explain the relationship between changing conditions and organism responses"
+        },
+        {
+          "code": "AC9S6U02",
+          "title": "Earth, Planets and Cyclic Phenomena",
+          "description": "Describe the movement of Earth and other planets relative to the sun and model how Earth's tilt, rotation on its axis and revolution around the sun relate to cyclic observable phenomena, including variable day and night length",
+          "y_goal": "Students model and explain how Earth's tilt, rotation and revolution produce cyclic observable phenomena including variable day and night length"
+        },
+        {
+          "code": "AC9S6U03",
+          "title": "Electrical Circuits and Energy",
+          "description": "Investigate the transfer and transformation of energy in electrical circuits, including the role of circuit components, insulators and conductors",
+          "y_goal": "Students explain how energy is transferred and transformed in electrical circuits and describe the role of components, insulators and conductors"
+        },
+        {
+          "code": "AC9S6U04",
+          "title": "Reversible and Irreversible Changes",
+          "description": "Compare reversible changes, including dissolving and changes of state, and irreversible changes, including cooking and rusting that produce new substances",
+          "y_goal": "Students compare reversible and irreversible changes, explaining what distinguishes them and identifying evidence that new substances have been produced"
+        }
+      ]
+    },
+    "5": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S5U01",
+          "title": "Structural Features and Survival",
+          "description": "Examine how particular structural features and behaviours of living things enable their survival in specific habitats",
+          "y_goal": "Students explain how specific structural features and behaviours of living things are adaptations that enable survival in particular habitats"
+        },
+        {
+          "code": "AC9S5U02",
+          "title": "Earth Surface Changes",
+          "description": "Describe how weathering, erosion, transportation and deposition cause slow or rapid change to Earth's surface",
+          "y_goal": "Students describe how weathering, erosion, transportation and deposition change Earth's surface over slow and rapid timescales"
+        },
+        {
+          "code": "AC9S5U03",
+          "title": "Light and Shadows",
+          "description": "Identify sources of light, recognise that light travels in a straight path and describe how shadows are formed and light can be reflected and refracted",
+          "y_goal": "Students explain that light travels in straight paths from sources and describe how shadows, reflection and refraction result from this"
+        },
+        {
+          "code": "AC9S5U04",
+          "title": "Particle Model of Matter",
+          "description": "Explain observable properties of solids, liquids and gases by modelling the motion and arrangement of particles",
+          "y_goal": "Students use a particle model to explain the observable properties of solids, liquids and gases in terms of particle motion and arrangement"
+        },
+        {
+          "code": "AC9S5H01",
+          "title": "Collaboration in Science",
+          "description": "Examine why advances in science are often the result of collaboration or build on the work of others",
+          "y_goal": "Students explain why scientific advances often depend on collaboration and building on prior work"
+        },
+        {
+          "code": "AC9S5H02",
+          "title": "Science in Decision Making",
+          "description": "Investigate how scientific knowledge is used by individuals and communities to identify problems, consider responses and make decisions",
+          "y_goal": "Students explain how scientific knowledge informs individual and community problem identification, responses and decision making"
+        }
+      ]
+    },
+    "4": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S4U01",
+          "title": "Food Chains and Habitats",
+          "description": "Explain the roles and interactions of consumers, producers and decomposers within a habitat and how food chains represent feeding relationships",
+          "y_goal": "Students explain the roles of consumers, producers and decomposers in a habitat and represent feeding relationships using food chains"
+        },
+        {
+          "code": "AC9S4U02",
+          "title": "Water Cycle",
+          "description": "Identify sources of water and describe key processes in the water cycle, including movement of water through the sky, landscape and ocean; precipitation; evaporation; and condensation",
+          "y_goal": "Students describe the key processes of the water cycle including precipitation, evaporation and condensation and trace the movement of water through sky, landscape and ocean"
+        },
+        {
+          "code": "AC9S4U03",
+          "title": "Forces and Motion",
+          "description": "Identify how forces can be exerted by one object on another and investigate the effect of frictional, gravitational and magnetic forces on the motion of objects",
+          "y_goal": "Students explain how frictional, gravitational and magnetic forces are exerted between objects and describe their effects on motion"
+        },
+        {
+          "code": "AC9S4U04",
+          "title": "Properties of Materials",
+          "description": "Examine the properties of natural and made materials including fibres, metals, glass and plastics and consider how these properties influence their use",
+          "y_goal": "Students explain how the properties of natural and made materials determine their suitability for different uses"
+        },
+        {
+          "code": "AC9S4H01",
+          "title": "Data and Scientific Explanations",
+          "description": "Examine how people use data to develop scientific explanations",
+          "y_goal": "Students explain how data is used to develop and support scientific explanations"
+        },
+        {
+          "code": "AC9S4H02",
+          "title": "Science Solving Problems",
+          "description": "Consider how people use scientific explanations to meet a need or solve a problem",
+          "y_goal": "Students explain how scientific knowledge is applied to meet needs and solve real-world problems"
+        }
+      ]
+    },
+    "3": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S3U01",
+          "title": "Living and Non-living Things",
+          "description": "Compare characteristics of living and non-living things and examine the differences between the life cycles of plants and animals",
+          "y_goal": "Students compare characteristics of living and non-living things and explain differences between plant and animal life cycles"
+        },
+        {
+          "code": "AC9S3U02",
+          "title": "Soils, Rocks and Minerals",
+          "description": "Compare the observable properties of soils, rocks and minerals and investigate why they are important Earth resources",
+          "y_goal": "Students compare observable properties of soils, rocks and minerals and explain their importance as Earth resources"
+        },
+        {
+          "code": "AC9S3U03",
+          "title": "Heat Energy and Temperature",
+          "description": "Identify sources of heat energy and examine how temperature changes when heat energy is transferred from one object to another",
+          "y_goal": "Students identify heat energy sources and explain how temperature changes when heat energy transfers between objects"
+        },
+        {
+          "code": "AC9S3U04",
+          "title": "States of Matter and Heat",
+          "description": "Investigate the observable properties of solids and liquids and how adding or removing heat energy leads to a change of state",
+          "y_goal": "Students describe observable properties of solids and liquids and explain how adding or removing heat energy causes changes of state"
+        },
+        {
+          "code": "AC9S3H01",
+          "title": "Data and Scientific Explanations",
+          "description": "Examine how people use data to develop scientific explanations",
+          "y_goal": "Students explain how data is used to develop scientific explanations"
+        },
+        {
+          "code": "AC9S3H02",
+          "title": "Science Solving Problems",
+          "description": "Consider how people use scientific explanations to meet a need or solve a problem",
+          "y_goal": "Students explain how scientific knowledge is applied to meet needs and solve problems"
+        }
+      ]
+    },
+    "2": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S2U01",
+          "title": "Earth in the Solar System",
+          "description": "Recognise Earth is a planet in the solar system and identify patterns in the changing position of the sun, moon, planets and stars in the sky",
+          "y_goal": "Students recognise Earth as a planet and identify patterns in the changing positions of the sun, moon, planets and stars"
+        },
+        {
+          "code": "AC9S2U02",
+          "title": "Sound and Vibration",
+          "description": "Explore different actions to make sounds and how to make a variety of sounds, and recognise that sound energy causes objects to vibrate",
+          "y_goal": "Students explain that sound is produced by different actions and that sound energy causes objects to vibrate"
+        },
+        {
+          "code": "AC9S2U03",
+          "title": "Physical Changes to Materials",
+          "description": "Recognise that materials can be changed physically without changing their material composition and explore the effect of different actions on materials including bending, twisting, stretching and breaking into smaller pieces",
+          "y_goal": "Students recognise that physical actions change the shape of materials without changing their composition"
+        }
+      ]
+    },
+    "1": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S1U01",
+          "title": "Basic Needs of Living Things",
+          "description": "Identify the basic needs of plants and animals, including air, water, food or shelter, and describe how the places they live meet those needs",
+          "y_goal": "Students identify the basic needs of plants and animals and describe how their habitat meets those needs"
+        },
+        {
+          "code": "AC9S1U02",
+          "title": "Daily and Seasonal Changes",
+          "description": "Describe daily and seasonal changes in the environment and explore how these changes affect everyday life",
+          "y_goal": "Students describe daily and seasonal environmental changes and explain how these affect everyday life"
+        },
+        {
+          "code": "AC9S1U03",
+          "title": "Pushes and Pulls",
+          "description": "Describe pushes and pulls in terms of strength and direction and predict the effect of these forces on objects' motion and shape",
+          "y_goal": "Students describe pushes and pulls in terms of strength and direction and predict their effects on motion and shape"
+        }
+      ]
+    },
+    "F": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9SFU01",
+          "title": "Features of Plants and Animals",
+          "description": "Observe external features of plants and animals and describe ways they can be grouped based on these features",
+          "y_goal": "Students observe external features of plants and animals and group them based on those features"
+        },
+        {
+          "code": "AC9SFU02",
+          "title": "How Objects Move",
+          "description": "Describe how objects move and how factors including their size, shape or material influence their movement",
+          "y_goal": "Students describe how objects move and explain how size, shape and material influence movement"
+        },
+        {
+          "code": "AC9SFU03",
+          "title": "Materials and Their Properties",
+          "description": "Recognise that objects can be composed of different materials and describe the observable properties of those materials",
+          "y_goal": "Students recognise that objects are made of materials and describe the observable properties of those materials"
+        }
+      ]
+    },
+    "8": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S8U01",
+          "title": "Cells as Basic Units",
+          "description": "Recognise cells as the basic units of living things, compare plant and animal cells, and describe the functions of specialised cell structures and organelles",
+          "y_goal": "Students recognise cells as the basic units of living things, compare plant and animal cells, and describe the functions of specialised structures and organelles"
+        },
+        {
+          "code": "AC9S8U02",
+          "title": "Structure, Function and Organ Systems",
+          "description": "Analyse the relationship between structure and function of cells, tissues and organs in a plant and an animal organ system and explain how these systems enable survival of the individual",
+          "y_goal": "Students analyse structure-function relationships across cells, tissues and organs and explain how organ systems enable individual survival"
+        },
+        {
+          "code": "AC9S8U03",
+          "title": "Plate Tectonics",
+          "description": "Investigate tectonic activity including the formation of geological features at divergent, convergent and transform plate boundaries and describe the scientific evidence for the theory of plate tectonics",
+          "y_goal": "Students explain geological features formed at plate boundaries and describe the evidence supporting plate tectonic theory"
+        },
+        {
+          "code": "AC9S8U04",
+          "title": "Rock Cycle",
+          "description": "Describe the key processes of the rock cycle, including the timescales over which they occur, and examine how the properties of sedimentary, igneous and metamorphic rocks reflect their formation and influence their use",
+          "y_goal": "Students describe rock cycle processes and explain how rock properties reflect formation history and determine use"
+        },
+        {
+          "code": "AC9S8U05",
+          "title": "Energy Transfer and Transformation",
+          "description": "Classify different types of energy as kinetic or potential and investigate energy transfer and transformations in simple systems",
+          "y_goal": "Students classify energy as kinetic or potential and explain energy transfers and transformations in simple systems"
+        },
+        {
+          "code": "AC9S8U06",
+          "title": "Elements, Compounds and Mixtures",
+          "description": "Classify matter as elements, compounds or mixtures and compare different representations of these, including 2-dimensional and 3-dimensional models, symbols for elements and formulas for molecules and compounds",
+          "y_goal": "Students classify matter as elements, compounds or mixtures and use symbols, formulas and models to represent them"
+        },
+        {
+          "code": "AC9S8U07",
+          "title": "Physical and Chemical Changes",
+          "description": "Compare physical and chemical changes and identify indicators of energy change in chemical reactions",
+          "y_goal": "Students compare physical and chemical changes and identify indicators of energy change in chemical reactions"
+        }
+      ]
+    },
+    "9": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S9U01",
+          "title": "Body Systems and Negative Feedback",
+          "description": "Compare the role of body systems in regulating and coordinating the body's response to a stimulus, and describe the operation of a negative feedback mechanism",
+          "y_goal": "Students explain how body systems coordinate responses to stimuli and describe the operation of negative feedback mechanisms"
+        },
+        {
+          "code": "AC9S9U02",
+          "title": "Reproduction and Species Survival",
+          "description": "Describe the form and function of reproductive cells and organs in animals and plants, and analyse how the processes of sexual and asexual reproduction enable survival of the species",
+          "y_goal": "Students describe reproductive structures and processes in animals and plants and analyse how sexual and asexual reproduction enable species survival"
+        },
+        {
+          "code": "AC9S9U03",
+          "title": "Carbon Cycle and Earth's Spheres",
+          "description": "Represent the carbon cycle and examine how key processes including combustion, photosynthesis and respiration rely on interactions between Earth's spheres",
+          "y_goal": "Students represent the carbon cycle and explain how combustion, photosynthesis and respiration depend on interactions between Earth's spheres"
+        },
+        {
+          "code": "AC9S9U04",
+          "title": "Wave and Particle Models",
+          "description": "Use wave and particle models to describe energy transfer through different mediums and examine the usefulness of each model for explaining phenomena",
+          "y_goal": "Students use wave and particle models to describe energy transfer and evaluate the usefulness of each model for explaining different phenomena"
+        },
+        {
+          "code": "AC9S9U05",
+          "title": "Conservation of Energy and Efficiency",
+          "description": "Apply the law of conservation of energy to analyse system efficiency in terms of energy inputs, outputs, transfers and transformations",
+          "y_goal": "Students apply conservation of energy to analyse system efficiency in terms of energy inputs, outputs, transfers and transformations"
+        },
+        {
+          "code": "AC9S9U06",
+          "title": "Atomic Model and Radioactive Decay",
+          "description": "Explain how the model of the atom changed following the discovery of electrons, protons and neutrons and describe how natural radioactive decay results in stable atoms",
+          "y_goal": "Students explain how atomic theory developed through discovery of subatomic particles and describe how radioactive decay produces stable atoms"
+        },
+        {
+          "code": "AC9S9U07",
+          "title": "Chemical Equations and Conservation of Mass",
+          "description": "Model the rearrangement of atoms in chemical reactions using a range of representations, including word and simple balanced chemical equations, and use these to demonstrate the law of conservation of mass",
+          "y_goal": "Students model atom rearrangement in chemical reactions using word and balanced equations and demonstrate conservation of mass"
+        }
+      ]
+    },
+    "10": {
+      "subject": "Science",
+      "standards": [
+        {
+          "code": "AC9S10U01",
+          "title": "Genetics and Inheritance",
+          "description": "Explain the role of meiosis and mitosis and the function of chromosomes, DNA and genes in heredity and predict patterns of Mendelian inheritance",
+          "y_goal": "Students explain the roles of meiosis, mitosis, chromosomes, DNA and genes in heredity and predict Mendelian inheritance patterns"
+        },
+        {
+          "code": "AC9S10U02",
+          "title": "Evolution by Natural Selection",
+          "description": "Use the theory of evolution by natural selection to explain past and present diversity and analyse the scientific evidence supporting the theory",
+          "y_goal": "Students use natural selection theory to explain biological diversity and analyse the evidence supporting evolution"
+        },
+        {
+          "code": "AC9S10U03",
+          "title": "Big Bang Theory",
+          "description": "Describe how the big bang theory models the origin and evolution of the universe and analyse the supporting evidence for the theory",
+          "y_goal": "Students describe how the big bang theory models the universe's origin and evolution and analyse the supporting evidence"
+        },
+        {
+          "code": "AC9S10U04",
+          "title": "Global Climate Change",
+          "description": "Use models of energy flow between the geosphere, biosphere, hydrosphere and atmosphere to explain patterns of global climate change",
+          "y_goal": "Students use energy flow models between Earth's spheres to explain patterns of global climate change"
+        },
+        {
+          "code": "AC9S10U05",
+          "title": "Newton's Laws of Motion",
+          "description": "Investigate Newton's laws of motion and quantitatively analyse the relationship between force, mass and acceleration of objects",
+          "y_goal": "Students apply Newton's laws of motion and quantitatively analyse the relationship between force, mass and acceleration"
+        },
+        {
+          "code": "AC9S10U06",
+          "title": "Periodic Table and Atomic Structure",
+          "description": "Explain how the structure and properties of atoms relate to the organisation of the elements in the periodic table",
+          "y_goal": "Students explain how atomic structure and properties determine the organisation of elements in the periodic table"
+        },
+        {
+          "code": "AC9S10U07",
+          "title": "Reaction Types and Rates",
+          "description": "Identify patterns in synthesis, decomposition and displacement reactions and investigate the factors that affect reaction rates",
+          "y_goal": "Students identify patterns in synthesis, decomposition and displacement reactions and explain factors that affect reaction rates"
+        }
+      ]
+    }
+  },
+  "progression_threads": {
+    "description": "Conceptual progression trees from Foundation to Year 10, organised by science strand. Foundation standards are roots; children represent the next conceptual step in the strand.",
+    "strands": {
+      "biological": {
+        "label": "Biological Sciences",
+        "tree": [
+          {
+            "code": "AC9SFU01",
+            "children": [
+              {
+                "code": "AC9S1U01",
+                "children": [
+                  {
+                    "code": "AC9S3U01",
+                    "children": [
+                      {
+                        "code": "AC9S5U01",
+                        "children": [
+                          {
+                            "code": "AC9S6U01",
+                            "children": [
+                              {
+                                "code": "AC9S7U01",
+                                "children": [
+                                  {
+                                    "code": "AC9S8U01",
+                                    "children": [
+                                      {
+                                        "code": "AC9S9U01",
+                                        "children": [
+                                          {
+                                            "code": "AC9S10U01",
+                                            "children": []
+                                          },
+                                          {
+                                            "code": "AC9S10U02",
+                                            "children": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "code": "AC9S9U02",
+                                        "children": [
+                                          {
+                                            "code": "AC9S10U01",
+                                            "children": []
+                                          },
+                                          {
+                                            "code": "AC9S10U02",
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "code": "AC9S8U02",
+                                    "children": [
+                                      {
+                                        "code": "AC9S9U01",
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "code": "AC9S7U02",
+                                "children": [
+                                  {
+                                    "code": "AC9S9U03",
+                                    "children": [
+                                      {
+                                        "code": "AC9S10U04",
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "earth_space": {
+        "label": "Earth and Space Sciences",
+        "tree": [
+          {
+            "code": "AC9S1U02",
+            "children": [
+              {
+                "code": "AC9S2U01",
+                "children": [
+                  {
+                    "code": "AC9S7U03",
+                    "children": [
+                      {
+                        "code": "AC9S10U03",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "code": "AC9S3U02",
+            "children": [
+              {
+                "code": "AC9S8U03",
+                "children": [
+                  {
+                    "code": "AC9S8U04",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "code": "AC9S6U02",
+            "children": [
+              {
+                "code": "AC9S7U03",
+                "children": []
+              }
+            ]
+          },
+          {
+            "code": "AC9S5U02",
+            "children": [
+              {
+                "code": "AC9S8U03",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "physical": {
+        "label": "Physical Sciences",
+        "tree": [
+          {
+            "code": "AC9SFU02",
+            "children": [
+              {
+                "code": "AC9S1U03",
+                "children": [
+                  {
+                    "code": "AC9S4U03",
+                    "children": [
+                      {
+                        "code": "AC9S7U04",
+                        "children": [
+                          {
+                            "code": "AC9S10U05",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "code": "AC9S2U02",
+            "children": [
+              {
+                "code": "AC9S5U03",
+                "children": [
+                  {
+                    "code": "AC9S9U04",
+                    "children": [
+                      {
+                        "code": "AC9S9U05",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "code": "AC9S3U03",
+            "children": [
+              {
+                "code": "AC9S8U05",
+                "children": [
+                  {
+                    "code": "AC9S9U05",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chemical": {
+        "label": "Chemical Sciences",
+        "tree": [
+          {
+            "code": "AC9SFU03",
+            "children": [
+              {
+                "code": "AC9S2U03",
+                "children": [
+                  {
+                    "code": "AC9S3U04",
+                    "children": [
+                      {
+                        "code": "AC9S4U04",
+                        "children": [
+                          {
+                            "code": "AC9S5U04",
+                            "children": [
+                              {
+                                "code": "AC9S7U05",
+                                "children": [
+                                  {
+                                    "code": "AC9S7U06",
+                                    "children": [
+                                      {
+                                        "code": "AC9S8U06",
+                                        "children": [
+                                          {
+                                            "code": "AC9S8U07",
+                                            "children": [
+                                              {
+                                                "code": "AC9S9U07",
+                                                "children": [
+                                                  {
+                                                    "code": "AC9S10U07",
+                                                    "children": []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "code": "AC9S9U06",
+                                            "children": [
+                                              {
+                                                "code": "AC9S10U06",
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "code": "AC9S6U04",
+            "children": [
+              {
+                "code": "AC9S8U07",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
