@@ -45,7 +45,7 @@ def show():
     breaks alignment and makes common assessment hard to justify.
   </p>
   <p class="hero-sub">
-    Learning Waypoints manages pace differences horizontally by adjusting pacing, challenge and support, rather than pushing some classes ahead of the shared conceptual sequence.
+    Waypoints Planner manages pace differences horizontally by adjusting pacing, challenge and support, rather than pushing some classes ahead of the shared conceptual sequence.
   </p>
   <p class="hero-sub">
     This supports deeper understanding of core concepts where appropriate, while also helping identify and address gaps to consolidate learning.
