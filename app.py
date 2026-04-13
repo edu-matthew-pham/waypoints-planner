@@ -3,7 +3,7 @@ from utils import init_session_state
 import screen0, screen1, screen2, screen3, screen4
 
 # ── Page config ───────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Learning Waypoints", page_icon="✦", layout="wide")
+st.set_page_config(page_title="Waypoints Planner | Learning Waypoints", page_icon="✦", layout="wide")
 
 # ── Session state ─────────────────────────────────────────────────────────────
 init_session_state()
@@ -24,8 +24,10 @@ def show_progress():
             col.caption(label)
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.title("✦ Learning Waypoints")
-st.caption("Year 7 Science · Beta")
+st.title("✦ Waypoints Planner")
+st.markdown(
+    '[Learning Waypoints](https://learningwaypoints.com) · Year 7 Science · Beta'
+)
 show_progress()
 st.divider()
 
